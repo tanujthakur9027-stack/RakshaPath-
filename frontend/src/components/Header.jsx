@@ -12,7 +12,8 @@ import {
   PhoneCall,
   Radio,
   BookOpen,
-  MapPin
+  MapPin,
+  Trophy
 } from 'lucide-react';
 import { CITY_PRESETS, NETWORK_NODES } from '../api/embeddedEngine';
 
@@ -28,7 +29,8 @@ export default function Header({
   currentRole = 'NDRF Tactical Lead',
   onOpenAuth,
   onOpenSOS,
-  onOpenGuide
+  onOpenGuide,
+  onOpenHackathonPitch = () => {}
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -135,6 +137,16 @@ export default function Header({
           >
             <Shield className="w-3.5 h-3.5" />
             <span className="truncate max-w-[120px]">{currentRole}</span>
+          </button>
+
+          {/* Hackathon Tour & Pitch Button */}
+          <button
+            onClick={onOpenHackathonPitch}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-amber-500/20 hover:from-amber-500/30 hover:to-orange-500/30 text-amber-300 border border-amber-500/50 text-xs font-bold transition shadow-sm animate-pulse"
+            title="Interactive Evaluator Tour & Live Demo Scenarios"
+          >
+            <Trophy className="w-3.5 h-3.5 text-amber-400" />
+            <span>🏆 Hackathon Tour</span>
           </button>
 
           {/* Civilian / Dispatcher Mode Toggle */}

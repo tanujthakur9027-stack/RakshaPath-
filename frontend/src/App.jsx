@@ -8,6 +8,7 @@ import CivilianSafetyCard from './components/CivilianSafetyCard';
 import CivilianSOSModal from './components/CivilianSOSModal';
 import GuideModal from './components/GuideModal';
 import AuthModal from './components/AuthModal';
+import HackathonPitchModal from './components/HackathonPitchModal';
 import { api } from './api/client';
 import { CITY_PRESETS, NETWORK_NODES, VEHICLE_PROFILES } from './api/embeddedEngine';
 
@@ -41,6 +42,7 @@ export default function App() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isSOSOpen, setIsSOSOpen] = useState(false);
   const [isGuideOpen, setIsGuideOpen] = useState(false);
+  const [isPitchOpen, setIsPitchOpen] = useState(false);
   const [selectedIncident, setSelectedIncident] = useState(null);
 
   // States & Districts derived from NETWORK_NODES
@@ -139,6 +141,27 @@ export default function App() {
     );
   };
 
+  // Hackathon Scenario Quick Launcher
+  const handleApplyScenario = (sc) => {
+    setCurrentCityId(sc.cityId);
+    setSelectedState(sc.state);
+    setSelectedDistrict(sc.district);
+    setOriginNodeId(sc.origin);
+    setDestNodeId(sc.dest);
+    setVehicleType(sc.vehicle);
+    setWaterDepth(sc.waterDepth);
+    setDamageLevel(sc.damage);
+    setDebrisLevel(sc.debris);
+    setDisasterType(sc.disasterType);
+    if (sc.civilian !== undefined) {
+      setIsCivilianMode(sc.civilian);
+    }
+    const n = NETWORK_NODES[sc.origin];
+    if (n) {
+      setMapCenter([n.lon, n.lat]);
+    }
+  };
+
   // Live Vehicle Hazard Evaluation
   const vehicleEval = useMemo(() => {
     return api.evaluateHazard(waterDepth, damageLevel, debrisLevel, vehicleType);
@@ -219,6 +242,7 @@ export default function App() {
         onOpenAuth={() => setIsAuthOpen(true)}
         onOpenSOS={() => setIsSOSOpen(true)}
         onOpenGuide={() => setIsGuideOpen(true)}
+        onOpenHackathonPitch={() => setIsPitchOpen(true)}
       />
 
       {/* 2. Main Workspace Layout */}
@@ -347,6 +371,15 @@ export default function App() {
       <GuideModal
         isOpen={isGuideOpen}
         onClose={() => setIsGuideOpen(false)}
+      />
+
+      <HackathonPitchModal
+        isOpen={isPitchOpen}
+        onClose={() => setIsPitchOpen(false)}
+        onApplyScenario={handleApplyScenario}
+        isCivilianMode={isCivilianMode}
+        onToggleCivilianMode={() => setIsCivilianMode(!isCivilianMode)}
+        onOpenSOS={() => setIsSOSOpen(true)}
       />
     </div>
   );

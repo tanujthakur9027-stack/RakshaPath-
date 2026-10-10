@@ -1,20 +1,27 @@
-# Raksh Path (रक्ष पथ)
-### Predictive Emergency Routing & Dispatch Platform for Floods in India
+# 🛡️ RakshaPath (रक्षापथ)
+### National Emergency Mobility Network • Autonomous Disaster Corridor AI
 
-[![Tests](https://img.shields.io/badge/pytest-22%20passed-emerald)](file:///tests)
+[![Hackathon Ready](https://img.shields.io/badge/Hackathon-Submission%20Ready-gold.svg)](file:///HACKATHON_SUBMISSION.md)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Edge%20Ready-black.svg?logo=vercel)](https://vercel.com)
+[![Pytest](https://img.shields.io/badge/pytest-22%20passed-emerald)](file:///tests)
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-1.0.0-cyan)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-19-blue)](https://react.dev)
 [![MapLibre](https://img.shields.io/badge/MapLibre%20GL-6.13-purple)](https://maplibre.org)
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](file:///docker-compose.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> 🏆 **Hackathon Evaluator Quick Links**:
+> - 📄 [Hackathon Submission Dossier (Pitch & Q&A)](file:///HACKATHON_SUBMISSION.md)
+> - 🎬 [Live Presentation & 3-Minute Demo Script](file:///DEMO_SCRIPT.md)
+> - 🌐 **Live Web Application**: Deploy in 30s on [Vercel](https://vercel.com) or run locally on `http://localhost:5173`
 
 ---
 
 ## 1. Problem Statement
 Commercial navigation engines (Google Maps, Apple Maps) cannot predict whether a road is passable for emergency vehicles during severe floods. In monsoon inundations, ambulances drive blindly into submerged lowlands (suffering engine hydrolocking and fatal delays), and 108/112 dispatchers send critical patients to the nearest hospital without knowing if trauma or ICU beds are already full.
 
-**Raksh Path** is an operational full-stack GIS, ML, and dispatch platform engineered to solve this crisis across India. Built for **Pan-India Nationwide Scale** covering major flood-vulnerable river basins across the country (Ganga, Yamuna, Brahmaputra, Konkan/Mithi, Coromandel/Adyar, Hooghly) with deep pilot calibration in **Prayagraj, Uttar Pradesh**:
-1. **Predicts Road Passability**: Hour-by-hour water depth and passability probabilities for 4 vehicle classes.
+**RakshaPath** is an operational full-stack GIS, ML, and dispatch platform engineered to solve this crisis across India. Built for **Pan-India Nationwide Scale** covering major disaster-vulnerable river basins across the country (*Delhi NCR, Prayagraj, Lucknow, Agra, Varanasi, Dehradun, Mumbai*):
+1. **Predicts Road Passability**: Hour-by-hour water depth and passability probabilities for 5 vehicle classes.
 2. **Generates Dual Safe Corridors**: A safe **Primary route** and a geographically diverse **Backup route**, each scored for reliability ($R = \prod p_e$).
 3. **Understandable Turn-by-Turn Navigation**: Plain-language route explanations showing *why* routes were chosen (e.g., elevated bridge decks vs avoided 45cm submerged underpasses).
 4. **Pan-India Flood Command Center**: Interactive national overview monitoring 7 major flood zones with instant city switching and live basin telemetry.
