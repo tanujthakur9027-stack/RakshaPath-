@@ -1,0 +1,2909 @@
+{
+  "graph": {
+    "crs": "EPSG:4326",
+    "name": "Prayagraj Drivable Emergency Network"
+  },
+  "nodes": {
+    "N_CIVIL_1": {
+      "name": "Subhash Chauraha (Civil Lines)",
+      "y": 26.1612,
+      "x": 91.7239,
+      "elevation_m": 93.5,
+      "zone_type": "ridge"
+    },
+    "N_CIVIL_2": {
+      "name": "MG Marg North",
+      "y": 26.1657,
+      "x": 91.7259,
+      "elevation_m": 94.0,
+      "zone_type": "ridge"
+    },
+    "N_CIVIL_3": {
+      "name": "High Court Junction",
+      "y": 26.157700000000002,
+      "x": 91.71589999999999,
+      "elevation_m": 95.0,
+      "zone_type": "ridge"
+    },
+    "N_CIVIL_4": {
+      "name": "Civil Lines Bus Station",
+      "y": 26.1627,
+      "x": 91.73089999999999,
+      "elevation_m": 93.0,
+      "zone_type": "ridge"
+    },
+    "N_CANT_1": {
+      "name": "Cantonment Hospital Gate",
+      "y": 26.160700000000002,
+      "x": 91.7109,
+      "elevation_m": 95.5,
+      "zone_type": "ridge"
+    },
+    "N_CANT_2": {
+      "name": "Cantonment South",
+      "y": 26.1537,
+      "x": 91.7049,
+      "elevation_m": 96.0,
+      "zone_type": "ridge"
+    },
+    "N_SRN_MAIN": {
+      "name": "Swaroop Rani Nehru Hospital Gate",
+      "y": 26.1518,
+      "x": 91.7441,
+      "elevation_m": 90.0,
+      "zone_type": "medical"
+    },
+    "N_MLN_MAIN": {
+      "name": "MLN Medical College Junction",
+      "y": 26.1497,
+      "x": 91.7419,
+      "elevation_m": 89.5,
+      "zone_type": "medical"
+    },
+    "N_DUFFERIN": {
+      "name": "Dufferin Hospital Gate",
+      "y": 26.1472,
+      "x": 91.72789999999999,
+      "elevation_m": 91.0,
+      "zone_type": "medical"
+    },
+    "N_TBS_BELI": {
+      "name": "Tej Bahadur Sapru (Beli) Hospital",
+      "y": 26.1695,
+      "x": 91.7374,
+      "elevation_m": 86.5,
+      "zone_type": "medical"
+    },
+    "N_GEO_1": {
+      "name": "Georgetown Crossing",
+      "y": 26.1557,
+      "x": 91.74889999999999,
+      "elevation_m": 89.0,
+      "zone_type": "urban"
+    },
+    "N_COLONEL_1": {
+      "name": "Colonelganj Crossing",
+      "y": 26.1677,
+      "x": 91.7509,
+      "elevation_m": 87.5,
+      "zone_type": "urban"
+    },
+    "N_UNIV_1": {
+      "name": "Prayagraj University Library",
+      "y": 26.1697,
+      "x": 91.7449,
+      "elevation_m": 88.0,
+      "zone_type": "urban"
+    },
+    "N_ALLEN_1": {
+      "name": "Allenganj Chauraha",
+      "y": 26.1747,
+      "x": 91.74289999999999,
+      "elevation_m": 86.0,
+      "zone_type": "urban"
+    },
+    "N_DARA_1": {
+      "name": "Daraganj Main Road",
+      "y": 26.1497,
+      "x": 91.76389999999999,
+      "elevation_m": 78.5,
+      "zone_type": "lowland"
+    },
+    "N_DARA_GHAT": {
+      "name": "Daraganj River Ghat Road",
+      "y": 26.1467,
+      "x": 91.7709,
+      "elevation_m": 75.2,
+      "zone_type": "lowland_critical"
+    },
+    "N_SANGAM_1": {
+      "name": "Sangam Bund Marg",
+      "y": 26.1417,
+      "x": 91.7689,
+      "elevation_m": 77.5,
+      "zone_type": "lowland"
+    },
+    "N_SANGAM_GHAT": {
+      "name": "Triveni Sangam Ghat Point",
+      "y": 26.1386,
+      "x": 91.7743,
+      "elevation_m": 74.6,
+      "zone_type": "lowland_critical"
+    },
+    "N_BAGHADA_1": {
+      "name": "Chhota Baghada Crossing",
+      "y": 26.1737,
+      "x": 91.75789999999999,
+      "elevation_m": 75.8,
+      "zone_type": "lowland_critical"
+    },
+    "N_BAGAMBARI": {
+      "name": "Bagambari Gaddi / Riverbank",
+      "y": 26.1637,
+      "x": 91.7619,
+      "elevation_m": 75.4,
+      "zone_type": "lowland_critical"
+    },
+    "N_BELI_KACHHAR": {
+      "name": "Beli Kachhar Low Road",
+      "y": 26.1767,
+      "x": 91.73389999999999,
+      "elevation_m": 75.3,
+      "zone_type": "lowland_critical"
+    },
+    "N_KARELI_1": {
+      "name": "Kareli 60-Feet Road",
+      "y": 26.1327,
+      "x": 91.7049,
+      "elevation_m": 81.0,
+      "zone_type": "lowland"
+    },
+    "N_KARELI_LOW": {
+      "name": "Kareli Lowland Embankment",
+      "y": 26.1267,
+      "x": 91.6999,
+      "elevation_m": 75.5,
+      "zone_type": "lowland_critical"
+    },
+    "N_SARASWATI_GHAT": {
+      "name": "Saraswati Ghat / Kydganj",
+      "y": 26.1317,
+      "x": 91.7319,
+      "elevation_m": 75.8,
+      "zone_type": "lowland"
+    },
+    "N_FORT_1": {
+      "name": "Akbar Fort Outer Road",
+      "y": 26.1367,
+      "x": 91.7619,
+      "elevation_m": 82.5,
+      "zone_type": "urban"
+    },
+    "N_SHASTRI_WEST": {
+      "name": "Shastri Bridge West Approach (Daraganj)",
+      "y": 26.1507,
+      "x": 91.76689999999999,
+      "elevation_m": 84.0,
+      "zone_type": "bridge_approach"
+    },
+    "N_SHASTRI_DECK": {
+      "name": "Shastri Bridge Deck (Mid-Ganga)",
+      "y": 26.1467,
+      "x": 91.7819,
+      "elevation_m": 92.5,
+      "zone_type": "bridge_deck"
+    },
+    "N_SHASTRI_EAST": {
+      "name": "Shastri Bridge East Approach (Jhusi)",
+      "y": 26.1437,
+      "x": 91.7949,
+      "elevation_m": 85.0,
+      "zone_type": "bridge_approach"
+    },
+    "N_CURZON_SOUTH": {
+      "name": "Phaphamau Bridge South (Teliyarganj)",
+      "y": 26.1937,
+      "x": 91.7349,
+      "elevation_m": 85.0,
+      "zone_type": "bridge_approach"
+    },
+    "N_CURZON_DECK": {
+      "name": "Phaphamau Bridge Deck (Mid-Ganga)",
+      "y": 26.2007,
+      "x": 91.7319,
+      "elevation_m": 91.5,
+      "zone_type": "bridge_deck"
+    },
+    "N_CURZON_NORTH": {
+      "name": "Phaphamau North Approach",
+      "y": 26.2067,
+      "x": 91.7289,
+      "elevation_m": 86.0,
+      "zone_type": "bridge_approach"
+    },
+    "N_NAINI_NORTH": {
+      "name": "New Yamuna Bridge North Approach",
+      "y": 26.1357,
+      "x": 91.7439,
+      "elevation_m": 86.5,
+      "zone_type": "bridge_approach"
+    },
+    "N_NAINI_DECK": {
+      "name": "New Yamuna Bridge Deck (Mid-Yamuna)",
+      "y": 26.125700000000002,
+      "x": 91.7499,
+      "elevation_m": 91.0,
+      "zone_type": "bridge_deck"
+    },
+    "N_NAINI_SOUTH": {
+      "name": "Naini South Approach / Industrial Gate",
+      "y": 26.1137,
+      "x": 91.7569,
+      "elevation_m": 86.0,
+      "zone_type": "bridge_approach"
+    },
+    "N_STATION_1": {
+      "name": "Prayagraj Junction (Civil Lines side)",
+      "y": 26.1537,
+      "x": 91.7209,
+      "elevation_m": 93.0,
+      "zone_type": "transit"
+    },
+    "N_STATION_2": {
+      "name": "Prayagraj Junction (City side)",
+      "y": 26.1507,
+      "x": 91.71889999999999,
+      "elevation_m": 92.0,
+      "zone_type": "transit"
+    },
+    "N_KHULDABAD": {
+      "name": "Khuldabad GT Road Crossing",
+      "y": 26.1447,
+      "x": 91.7119,
+      "elevation_m": 90.0,
+      "zone_type": "urban"
+    }
+  },
+  "edges": [
+    {
+      "u": "N_CIVIL_1",
+      "v": "N_CIVIL_2",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_0",
+        "name": "Mahatma Gandhi Marg North",
+        "highway": "primary",
+        "length": 539.2,
+        "speed_kph": 50.0,
+        "travel_time_sec": 38.8,
+        "elevation_m": 93.75,
+        "slope": 0.09,
+        "dist_to_river_m": 2602.6,
+        "hand_m": 19.75,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7239,
+            26.1612
+          ],
+          [
+            91.7259,
+            26.1657
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_1",
+      "v": "N_CIVIL_3",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_1",
+        "name": "High Court Link Road",
+        "highway": "primary",
+        "length": 892.5,
+        "speed_kph": 50.0,
+        "travel_time_sec": 64.3,
+        "elevation_m": 94.25,
+        "slope": 0.17,
+        "dist_to_river_m": 3246.0,
+        "hand_m": 20.25,
+        "wetness_index": 6.12,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7239,
+            26.1612
+          ],
+          [
+            91.71589999999999,
+            26.157700000000002
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_1",
+      "v": "N_CIVIL_4",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_2",
+        "name": "Civil Lines Bus Corridor",
+        "highway": "primary",
+        "length": 722.3,
+        "speed_kph": 50.0,
+        "travel_time_sec": 52.0,
+        "elevation_m": 93.25,
+        "slope": 0.07,
+        "dist_to_river_m": 2638.2,
+        "hand_m": 19.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7239,
+            26.1612
+          ],
+          [
+            91.73089999999999,
+            26.1627
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_1",
+      "v": "N_STATION_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_5",
+        "name": "Station Approach Road",
+        "highway": "primary",
+        "length": 886.7,
+        "speed_kph": 50.0,
+        "travel_time_sec": 63.8,
+        "elevation_m": 93.25,
+        "slope": 0.06,
+        "dist_to_river_m": 3206.7,
+        "hand_m": 19.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7239,
+            26.1612
+          ],
+          [
+            91.7209,
+            26.1537
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_2",
+      "v": "N_CIVIL_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_0_rev",
+        "name": "Mahatma Gandhi Marg North",
+        "highway": "primary",
+        "length": 539.2,
+        "speed_kph": 50.0,
+        "travel_time_sec": 38.8,
+        "elevation_m": 93.75,
+        "slope": 0.09,
+        "dist_to_river_m": 2602.6,
+        "hand_m": 19.75,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7259,
+            26.1657
+          ],
+          [
+            91.7239,
+            26.1612
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_2",
+      "v": "N_UNIV_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_12",
+        "name": "University Road North",
+        "highway": "primary",
+        "length": 1958.7,
+        "speed_kph": 50.0,
+        "travel_time_sec": 141.0,
+        "elevation_m": 91.0,
+        "slope": 0.31,
+        "dist_to_river_m": 1796.7,
+        "hand_m": 17.0,
+        "wetness_index": 5.63,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7259,
+            26.1657
+          ],
+          [
+            91.7449,
+            26.1697
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_3",
+      "v": "N_CIVIL_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_1_rev",
+        "name": "High Court Link Road",
+        "highway": "primary",
+        "length": 892.5,
+        "speed_kph": 50.0,
+        "travel_time_sec": 64.3,
+        "elevation_m": 94.25,
+        "slope": 0.17,
+        "dist_to_river_m": 3246.0,
+        "hand_m": 20.25,
+        "wetness_index": 6.12,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.71589999999999,
+            26.157700000000002
+          ],
+          [
+            91.7239,
+            26.1612
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_3",
+      "v": "N_CANT_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_3",
+        "name": "Cantonment Avenue Road",
+        "highway": "secondary",
+        "length": 602.7,
+        "speed_kph": 40.0,
+        "travel_time_sec": 54.2,
+        "elevation_m": 95.25,
+        "slope": 0.08,
+        "dist_to_river_m": 3453.7,
+        "hand_m": 21.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.71589999999999,
+            26.157700000000002
+          ],
+          [
+            91.7109,
+            26.160700000000002
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_4",
+      "v": "N_CIVIL_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_2_rev",
+        "name": "Civil Lines Bus Corridor",
+        "highway": "primary",
+        "length": 722.3,
+        "speed_kph": 50.0,
+        "travel_time_sec": 52.0,
+        "elevation_m": 93.25,
+        "slope": 0.07,
+        "dist_to_river_m": 2638.2,
+        "hand_m": 19.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.73089999999999,
+            26.1627
+          ],
+          [
+            91.7239,
+            26.1612
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_4",
+      "v": "N_DUFFERIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_9",
+        "name": "Kutchery to Dufferin Road",
+        "highway": "secondary",
+        "length": 1749.6,
+        "speed_kph": 40.0,
+        "travel_time_sec": 157.5,
+        "elevation_m": 92.0,
+        "slope": 0.11,
+        "dist_to_river_m": 2923.0,
+        "hand_m": 18.0,
+        "wetness_index": 6.44,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.73089999999999,
+            26.1627
+          ],
+          [
+            91.72789999999999,
+            26.1472
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CIVIL_4",
+      "v": "N_GEO_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_15",
+        "name": "Tagore Town - Georgetown Marg",
+        "highway": "primary",
+        "length": 1967.8,
+        "speed_kph": 50.0,
+        "travel_time_sec": 141.7,
+        "elevation_m": 91.0,
+        "slope": 0.2,
+        "dist_to_river_m": 2093.3,
+        "hand_m": 17.0,
+        "wetness_index": 5.99,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.73089999999999,
+            26.1627
+          ],
+          [
+            91.74889999999999,
+            26.1557
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CANT_1",
+      "v": "N_CIVIL_3",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_3_rev",
+        "name": "Cantonment Avenue Road",
+        "highway": "secondary",
+        "length": 602.7,
+        "speed_kph": 40.0,
+        "travel_time_sec": 54.2,
+        "elevation_m": 95.25,
+        "slope": 0.08,
+        "dist_to_river_m": 3453.7,
+        "hand_m": 21.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.7109,
+            26.160700000000002
+          ],
+          [
+            91.71589999999999,
+            26.157700000000002
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CANT_1",
+      "v": "N_CANT_2",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_4",
+        "name": "Military Hospital South Line",
+        "highway": "tertiary",
+        "length": 984.3,
+        "speed_kph": 30.0,
+        "travel_time_sec": 118.1,
+        "elevation_m": 95.75,
+        "slope": 0.05,
+        "dist_to_river_m": 3390.4,
+        "hand_m": 21.75,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 8.0,
+        "geometry": [
+          [
+            91.7109,
+            26.160700000000002
+          ],
+          [
+            91.7049,
+            26.1537
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CANT_2",
+      "v": "N_CANT_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_4_rev",
+        "name": "Military Hospital South Line",
+        "highway": "tertiary",
+        "length": 984.3,
+        "speed_kph": 30.0,
+        "travel_time_sec": 118.1,
+        "elevation_m": 95.75,
+        "slope": 0.05,
+        "dist_to_river_m": 3390.4,
+        "hand_m": 21.75,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 8.0,
+        "geometry": [
+          [
+            91.7049,
+            26.1537
+          ],
+          [
+            91.7109,
+            26.160700000000002
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SRN_MAIN",
+      "v": "N_MLN_MAIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_11_rev",
+        "name": "Emergency Trauma Corridor",
+        "highway": "primary",
+        "length": 321.4,
+        "speed_kph": 50.0,
+        "travel_time_sec": 23.1,
+        "elevation_m": 89.75,
+        "slope": 0.16,
+        "dist_to_river_m": 2016.1,
+        "hand_m": 15.75,
+        "wetness_index": 6.17,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.8,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7441,
+            26.1518
+          ],
+          [
+            91.7419,
+            26.1497
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SRN_MAIN",
+      "v": "N_GEO_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_17_rev",
+        "name": "Georgetown to SRN Road",
+        "highway": "secondary",
+        "length": 648.3,
+        "speed_kph": 40.0,
+        "travel_time_sec": 58.3,
+        "elevation_m": 89.5,
+        "slope": 0.15,
+        "dist_to_river_m": 2018.3,
+        "hand_m": 15.5,
+        "wetness_index": 6.21,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.7441,
+            26.1518
+          ],
+          [
+            91.74889999999999,
+            26.1557
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SRN_MAIN",
+      "v": "N_NAINI_NORTH",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_32",
+        "name": "SRN to Yamuna Bridge Express Road",
+        "highway": "primary",
+        "length": 1790.4,
+        "speed_kph": 50.0,
+        "travel_time_sec": 128.9,
+        "elevation_m": 88.25,
+        "slope": 0.2,
+        "dist_to_river_m": 1232.0,
+        "hand_m": 14.25,
+        "wetness_index": 5.99,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7441,
+            26.1518
+          ],
+          [
+            91.7439,
+            26.1357
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_MLN_MAIN",
+      "v": "N_DUFFERIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_10_rev",
+        "name": "Medical Enclave Avenue",
+        "highway": "primary",
+        "length": 1433.0,
+        "speed_kph": 50.0,
+        "travel_time_sec": 103.2,
+        "elevation_m": 90.25,
+        "slope": 0.1,
+        "dist_to_river_m": 2018.8,
+        "hand_m": 16.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7419,
+            26.1497
+          ],
+          [
+            91.72789999999999,
+            26.1472
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_MLN_MAIN",
+      "v": "N_SRN_MAIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_11",
+        "name": "Emergency Trauma Corridor",
+        "highway": "primary",
+        "length": 321.4,
+        "speed_kph": 50.0,
+        "travel_time_sec": 23.1,
+        "elevation_m": 89.75,
+        "slope": 0.16,
+        "dist_to_river_m": 2016.1,
+        "hand_m": 15.75,
+        "wetness_index": 6.17,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.8,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7419,
+            26.1497
+          ],
+          [
+            91.7441,
+            26.1518
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DUFFERIN",
+      "v": "N_CIVIL_4",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_9_rev",
+        "name": "Kutchery to Dufferin Road",
+        "highway": "secondary",
+        "length": 1749.6,
+        "speed_kph": 40.0,
+        "travel_time_sec": 157.5,
+        "elevation_m": 92.0,
+        "slope": 0.11,
+        "dist_to_river_m": 2923.0,
+        "hand_m": 18.0,
+        "wetness_index": 6.44,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.72789999999999,
+            26.1472
+          ],
+          [
+            91.73089999999999,
+            26.1627
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DUFFERIN",
+      "v": "N_MLN_MAIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_10",
+        "name": "Medical Enclave Avenue",
+        "highway": "primary",
+        "length": 1433.0,
+        "speed_kph": 50.0,
+        "travel_time_sec": 103.2,
+        "elevation_m": 90.25,
+        "slope": 0.1,
+        "dist_to_river_m": 2018.8,
+        "hand_m": 16.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.72789999999999,
+            26.1472
+          ],
+          [
+            91.7419,
+            26.1497
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DUFFERIN",
+      "v": "N_SARASWATI_GHAT",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_35",
+        "name": "Kydganj to Saraswati Ghat",
+        "highway": "secondary",
+        "length": 1769.7,
+        "speed_kph": 40.0,
+        "travel_time_sec": 159.3,
+        "elevation_m": 83.4,
+        "slope": 0.86,
+        "dist_to_river_m": 1561.2,
+        "hand_m": 9.4,
+        "wetness_index": 4.7,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 18.0,
+        "maxheight": 3.8,
+        "width": 8.0,
+        "geometry": [
+          [
+            91.72789999999999,
+            26.1472
+          ],
+          [
+            91.7319,
+            26.1317
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_TBS_BELI",
+      "v": "N_UNIV_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_13_rev",
+        "name": "Beli Hospital Bypass",
+        "highway": "secondary",
+        "length": 753.3,
+        "speed_kph": 40.0,
+        "travel_time_sec": 67.8,
+        "elevation_m": 87.25,
+        "slope": 0.2,
+        "dist_to_river_m": 1601.4,
+        "hand_m": 13.25,
+        "wetness_index": 5.99,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.7374,
+            26.1695
+          ],
+          [
+            91.7449,
+            26.1697
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_TBS_BELI",
+      "v": "N_BELI_KACHHAR",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_26",
+        "name": "Beli Lowland Kachhar Lane",
+        "highway": "residential",
+        "length": 874.3,
+        "speed_kph": 22.0,
+        "travel_time_sec": 143.1,
+        "elevation_m": 80.9,
+        "slope": 1.28,
+        "dist_to_river_m": 1200.1,
+        "hand_m": 6.9,
+        "wetness_index": 4.32,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 5.0,
+        "geometry": [
+          [
+            91.7374,
+            26.1695
+          ],
+          [
+            91.73389999999999,
+            26.1767
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_GEO_1",
+      "v": "N_CIVIL_4",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_15_rev",
+        "name": "Tagore Town - Georgetown Marg",
+        "highway": "primary",
+        "length": 1967.8,
+        "speed_kph": 50.0,
+        "travel_time_sec": 141.7,
+        "elevation_m": 91.0,
+        "slope": 0.2,
+        "dist_to_river_m": 2093.3,
+        "hand_m": 17.0,
+        "wetness_index": 5.99,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.74889999999999,
+            26.1557
+          ],
+          [
+            91.73089999999999,
+            26.1627
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_GEO_1",
+      "v": "N_COLONEL_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_16",
+        "name": "Colonelganj Arterial",
+        "highway": "secondary",
+        "length": 1349.4,
+        "speed_kph": 40.0,
+        "travel_time_sec": 121.4,
+        "elevation_m": 88.25,
+        "slope": 0.11,
+        "dist_to_river_m": 1118.5,
+        "hand_m": 14.25,
+        "wetness_index": 6.44,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.74889999999999,
+            26.1557
+          ],
+          [
+            91.7509,
+            26.1677
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_GEO_1",
+      "v": "N_SRN_MAIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_17",
+        "name": "Georgetown to SRN Road",
+        "highway": "secondary",
+        "length": 648.3,
+        "speed_kph": 40.0,
+        "travel_time_sec": 58.3,
+        "elevation_m": 89.5,
+        "slope": 0.15,
+        "dist_to_river_m": 2018.3,
+        "hand_m": 15.5,
+        "wetness_index": 6.21,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.74889999999999,
+            26.1557
+          ],
+          [
+            91.7441,
+            26.1518
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_GEO_1",
+      "v": "N_DARA_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_18",
+        "name": "Daraganj Access Highway",
+        "highway": "primary",
+        "length": 1647.3,
+        "speed_kph": 50.0,
+        "travel_time_sec": 118.6,
+        "elevation_m": 83.75,
+        "slope": 0.64,
+        "dist_to_river_m": 1601.6,
+        "hand_m": 9.75,
+        "wetness_index": 4.98,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.2,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.74889999999999,
+            26.1557
+          ],
+          [
+            91.76389999999999,
+            26.1497
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_COLONEL_1",
+      "v": "N_GEO_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_16_rev",
+        "name": "Colonelganj Arterial",
+        "highway": "secondary",
+        "length": 1349.4,
+        "speed_kph": 40.0,
+        "travel_time_sec": 121.4,
+        "elevation_m": 88.25,
+        "slope": 0.11,
+        "dist_to_river_m": 1118.5,
+        "hand_m": 14.25,
+        "wetness_index": 6.44,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.7509,
+            26.1677
+          ],
+          [
+            91.74889999999999,
+            26.1557
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_COLONEL_1",
+      "v": "N_BAGAMBARI",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_23",
+        "name": "Bagambari Gaddi Lowland Street",
+        "highway": "residential",
+        "length": 1190.6,
+        "speed_kph": 22.0,
+        "travel_time_sec": 194.8,
+        "elevation_m": 81.45,
+        "slope": 1.02,
+        "dist_to_river_m": 366.0,
+        "hand_m": 7.45,
+        "wetness_index": 4.54,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 12.0,
+        "maxheight": 3.5,
+        "width": 6.0,
+        "geometry": [
+          [
+            91.7509,
+            26.1677
+          ],
+          [
+            91.7619,
+            26.1637
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_COLONEL_1",
+      "v": "N_BAGHADA_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_24",
+        "name": "Chhota Baghada Floodway Lane",
+        "highway": "residential",
+        "length": 969.0,
+        "speed_kph": 22.0,
+        "travel_time_sec": 158.6,
+        "elevation_m": 81.65,
+        "slope": 1.21,
+        "dist_to_river_m": 415.8,
+        "hand_m": 7.65,
+        "wetness_index": 4.37,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 5.5,
+        "geometry": [
+          [
+            91.7509,
+            26.1677
+          ],
+          [
+            91.75789999999999,
+            26.1737
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_UNIV_1",
+      "v": "N_CIVIL_2",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_12_rev",
+        "name": "University Road North",
+        "highway": "primary",
+        "length": 1958.7,
+        "speed_kph": 50.0,
+        "travel_time_sec": 141.0,
+        "elevation_m": 91.0,
+        "slope": 0.31,
+        "dist_to_river_m": 1796.7,
+        "hand_m": 17.0,
+        "wetness_index": 5.63,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7449,
+            26.1697
+          ],
+          [
+            91.7259,
+            26.1657
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_UNIV_1",
+      "v": "N_TBS_BELI",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_13",
+        "name": "Beli Hospital Bypass",
+        "highway": "secondary",
+        "length": 753.3,
+        "speed_kph": 40.0,
+        "travel_time_sec": 67.8,
+        "elevation_m": 87.25,
+        "slope": 0.2,
+        "dist_to_river_m": 1601.4,
+        "hand_m": 13.25,
+        "wetness_index": 5.99,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.7449,
+            26.1697
+          ],
+          [
+            91.7374,
+            26.1695
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_UNIV_1",
+      "v": "N_ALLEN_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_14",
+        "name": "Allenganj Main Road",
+        "highway": "secondary",
+        "length": 591.1,
+        "speed_kph": 40.0,
+        "travel_time_sec": 53.2,
+        "elevation_m": 87.0,
+        "slope": 0.34,
+        "dist_to_river_m": 1413.5,
+        "hand_m": 13.0,
+        "wetness_index": 5.55,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.7449,
+            26.1697
+          ],
+          [
+            91.74289999999999,
+            26.1747
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_ALLEN_1",
+      "v": "N_UNIV_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_14_rev",
+        "name": "Allenganj Main Road",
+        "highway": "secondary",
+        "length": 591.1,
+        "speed_kph": 40.0,
+        "travel_time_sec": 53.2,
+        "elevation_m": 87.0,
+        "slope": 0.34,
+        "dist_to_river_m": 1413.5,
+        "hand_m": 13.0,
+        "wetness_index": 5.55,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.74289999999999,
+            26.1747
+          ],
+          [
+            91.7449,
+            26.1697
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_ALLEN_1",
+      "v": "N_CURZON_SOUTH",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_29",
+        "name": "Teliyarganj Phaphamau Corridor",
+        "highway": "primary",
+        "length": 2260.2,
+        "speed_kph": 50.0,
+        "travel_time_sec": 162.7,
+        "elevation_m": 85.5,
+        "slope": 0.04,
+        "dist_to_river_m": 114.8,
+        "hand_m": 11.5,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.74289999999999,
+            26.1747
+          ],
+          [
+            91.7349,
+            26.1937
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DARA_1",
+      "v": "N_GEO_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_18_rev",
+        "name": "Daraganj Access Highway",
+        "highway": "primary",
+        "length": 1647.3,
+        "speed_kph": 50.0,
+        "travel_time_sec": 118.6,
+        "elevation_m": 83.75,
+        "slope": 0.64,
+        "dist_to_river_m": 1601.6,
+        "hand_m": 9.75,
+        "wetness_index": 4.98,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.2,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.76389999999999,
+            26.1497
+          ],
+          [
+            91.74889999999999,
+            26.1557
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DARA_1",
+      "v": "N_DARA_GHAT",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_19",
+        "name": "Daraganj Riverbank Ghat Road",
+        "highway": "residential",
+        "length": 778.0,
+        "speed_kph": 22.0,
+        "travel_time_sec": 127.3,
+        "elevation_m": 76.85,
+        "slope": 0.42,
+        "dist_to_river_m": 389.0,
+        "hand_m": 2.85,
+        "wetness_index": 5.36,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 12.0,
+        "maxheight": 3.5,
+        "width": 6.0,
+        "geometry": [
+          [
+            91.76389999999999,
+            26.1497
+          ],
+          [
+            91.7709,
+            26.1467
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DARA_1",
+      "v": "N_SANGAM_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_20",
+        "name": "Sangam Bund Road (High Embankment)",
+        "highway": "primary",
+        "length": 1021.5,
+        "speed_kph": 50.0,
+        "travel_time_sec": 73.5,
+        "elevation_m": 78.0,
+        "slope": 0.1,
+        "dist_to_river_m": 465.3,
+        "hand_m": 4.0,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.76389999999999,
+            26.1497
+          ],
+          [
+            91.7689,
+            26.1417
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DARA_1",
+      "v": "N_SHASTRI_WEST",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_22",
+        "name": "Shastri Bridge West Incline",
+        "highway": "primary",
+        "length": 321.1,
+        "speed_kph": 50.0,
+        "travel_time_sec": 23.1,
+        "elevation_m": 81.25,
+        "slope": 1.71,
+        "dist_to_river_m": 675.6,
+        "hand_m": 7.25,
+        "wetness_index": 4.04,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 40.0,
+        "maxheight": 4.8,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.76389999999999,
+            26.1497
+          ],
+          [
+            91.76689999999999,
+            26.1507
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_DARA_GHAT",
+      "v": "N_DARA_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_19_rev",
+        "name": "Daraganj Riverbank Ghat Road",
+        "highway": "residential",
+        "length": 778.0,
+        "speed_kph": 22.0,
+        "travel_time_sec": 127.3,
+        "elevation_m": 76.85,
+        "slope": 0.42,
+        "dist_to_river_m": 389.0,
+        "hand_m": 2.85,
+        "wetness_index": 5.36,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 12.0,
+        "maxheight": 3.5,
+        "width": 6.0,
+        "geometry": [
+          [
+            91.7709,
+            26.1467
+          ],
+          [
+            91.76389999999999,
+            26.1497
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SANGAM_1",
+      "v": "N_DARA_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_20_rev",
+        "name": "Sangam Bund Road (High Embankment)",
+        "highway": "primary",
+        "length": 1021.5,
+        "speed_kph": 50.0,
+        "travel_time_sec": 73.5,
+        "elevation_m": 78.0,
+        "slope": 0.1,
+        "dist_to_river_m": 465.3,
+        "hand_m": 4.0,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.7689,
+            26.1417
+          ],
+          [
+            91.76389999999999,
+            26.1497
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SANGAM_1",
+      "v": "N_SANGAM_GHAT",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_21",
+        "name": "Triveni Sangam Pilgrimage Access",
+        "highway": "unclassified",
+        "length": 642.6,
+        "speed_kph": 20.0,
+        "travel_time_sec": 115.7,
+        "elevation_m": 76.05,
+        "slope": 0.45,
+        "dist_to_river_m": 321.3,
+        "hand_m": 2.05,
+        "wetness_index": 5.3,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 6.5,
+        "geometry": [
+          [
+            91.7689,
+            26.1417
+          ],
+          [
+            91.7743,
+            26.1386
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SANGAM_1",
+      "v": "N_FORT_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_37_rev",
+        "name": "Fort East Sangam Link",
+        "highway": "secondary",
+        "length": 896.2,
+        "speed_kph": 40.0,
+        "travel_time_sec": 80.7,
+        "elevation_m": 80.0,
+        "slope": 0.56,
+        "dist_to_river_m": 282.5,
+        "hand_m": 6.0,
+        "wetness_index": 5.1,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.7689,
+            26.1417
+          ],
+          [
+            91.7619,
+            26.1367
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SANGAM_GHAT",
+      "v": "N_SANGAM_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_21_rev",
+        "name": "Triveni Sangam Pilgrimage Access",
+        "highway": "unclassified",
+        "length": 642.6,
+        "speed_kph": 20.0,
+        "travel_time_sec": 115.7,
+        "elevation_m": 76.05,
+        "slope": 0.45,
+        "dist_to_river_m": 321.3,
+        "hand_m": 2.05,
+        "wetness_index": 5.3,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 6.5,
+        "geometry": [
+          [
+            91.7743,
+            26.1386
+          ],
+          [
+            91.7689,
+            26.1417
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_BAGHADA_1",
+      "v": "N_COLONEL_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_24_rev",
+        "name": "Chhota Baghada Floodway Lane",
+        "highway": "residential",
+        "length": 969.0,
+        "speed_kph": 22.0,
+        "travel_time_sec": 158.6,
+        "elevation_m": 81.65,
+        "slope": 1.21,
+        "dist_to_river_m": 415.8,
+        "hand_m": 7.65,
+        "wetness_index": 4.37,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 5.5,
+        "geometry": [
+          [
+            91.75789999999999,
+            26.1737
+          ],
+          [
+            91.7509,
+            26.1677
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_BAGHADA_1",
+      "v": "N_BAGAMBARI",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_25",
+        "name": "Riverbank Marginal Bandh Road",
+        "highway": "residential",
+        "length": 1182.2,
+        "speed_kph": 22.0,
+        "travel_time_sec": 193.5,
+        "elevation_m": 75.6,
+        "slope": 0.03,
+        "dist_to_river_m": 200.8,
+        "hand_m": 1.6,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 5.0,
+        "geometry": [
+          [
+            91.75789999999999,
+            26.1737
+          ],
+          [
+            91.7619,
+            26.1637
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_BAGAMBARI",
+      "v": "N_COLONEL_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_23_rev",
+        "name": "Bagambari Gaddi Lowland Street",
+        "highway": "residential",
+        "length": 1190.6,
+        "speed_kph": 22.0,
+        "travel_time_sec": 194.8,
+        "elevation_m": 81.45,
+        "slope": 1.02,
+        "dist_to_river_m": 366.0,
+        "hand_m": 7.45,
+        "wetness_index": 4.54,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 12.0,
+        "maxheight": 3.5,
+        "width": 6.0,
+        "geometry": [
+          [
+            91.7619,
+            26.1637
+          ],
+          [
+            91.7509,
+            26.1677
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_BAGAMBARI",
+      "v": "N_BAGHADA_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_25_rev",
+        "name": "Riverbank Marginal Bandh Road",
+        "highway": "residential",
+        "length": 1182.2,
+        "speed_kph": 22.0,
+        "travel_time_sec": 193.5,
+        "elevation_m": 75.6,
+        "slope": 0.03,
+        "dist_to_river_m": 200.8,
+        "hand_m": 1.6,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 5.0,
+        "geometry": [
+          [
+            91.7619,
+            26.1637
+          ],
+          [
+            91.75789999999999,
+            26.1737
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_BELI_KACHHAR",
+      "v": "N_TBS_BELI",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_26_rev",
+        "name": "Beli Lowland Kachhar Lane",
+        "highway": "residential",
+        "length": 874.3,
+        "speed_kph": 22.0,
+        "travel_time_sec": 143.1,
+        "elevation_m": 80.9,
+        "slope": 1.28,
+        "dist_to_river_m": 1200.1,
+        "hand_m": 6.9,
+        "wetness_index": 4.32,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 10.0,
+        "maxheight": 3.2,
+        "width": 5.0,
+        "geometry": [
+          [
+            91.73389999999999,
+            26.1767
+          ],
+          [
+            91.7374,
+            26.1695
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_KARELI_1",
+      "v": "N_KHULDABAD",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_8_rev",
+        "name": "Khuldabad-Kareli Link Road",
+        "highway": "secondary",
+        "length": 1508.2,
+        "speed_kph": 40.0,
+        "travel_time_sec": 135.7,
+        "elevation_m": 85.5,
+        "slope": 0.6,
+        "dist_to_river_m": 1603.2,
+        "hand_m": 11.5,
+        "wetness_index": 5.04,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.7049,
+            26.1327
+          ],
+          [
+            91.7119,
+            26.1447
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_KARELI_1",
+      "v": "N_KARELI_LOW",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_38",
+        "name": "Kareli Lowland Sector 4",
+        "highway": "residential",
+        "length": 835.0,
+        "speed_kph": 22.0,
+        "travel_time_sec": 136.6,
+        "elevation_m": 78.25,
+        "slope": 0.66,
+        "dist_to_river_m": 1752.8,
+        "hand_m": 4.25,
+        "wetness_index": 4.95,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 12.0,
+        "maxheight": 3.4,
+        "width": 6.0,
+        "geometry": [
+          [
+            91.7049,
+            26.1327
+          ],
+          [
+            91.6999,
+            26.1267
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_KARELI_1",
+      "v": "N_SARASWATI_GHAT",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_39",
+        "name": "Kareli-Kydganj Riverside Road",
+        "highway": "secondary",
+        "length": 2713.8,
+        "speed_kph": 40.0,
+        "travel_time_sec": 244.2,
+        "elevation_m": 78.4,
+        "slope": 0.19,
+        "dist_to_river_m": 417.3,
+        "hand_m": 4.4,
+        "wetness_index": 6.03,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 3.8,
+        "width": 8.0,
+        "geometry": [
+          [
+            91.7049,
+            26.1327
+          ],
+          [
+            91.7319,
+            26.1317
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_KARELI_LOW",
+      "v": "N_KARELI_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_38_rev",
+        "name": "Kareli Lowland Sector 4",
+        "highway": "residential",
+        "length": 835.0,
+        "speed_kph": 22.0,
+        "travel_time_sec": 136.6,
+        "elevation_m": 78.25,
+        "slope": 0.66,
+        "dist_to_river_m": 1752.8,
+        "hand_m": 4.25,
+        "wetness_index": 4.95,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 12.0,
+        "maxheight": 3.4,
+        "width": 6.0,
+        "geometry": [
+          [
+            91.6999,
+            26.1267
+          ],
+          [
+            91.7049,
+            26.1327
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SARASWATI_GHAT",
+      "v": "N_DUFFERIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_35_rev",
+        "name": "Kydganj to Saraswati Ghat",
+        "highway": "secondary",
+        "length": 1769.7,
+        "speed_kph": 40.0,
+        "travel_time_sec": 159.3,
+        "elevation_m": 83.4,
+        "slope": 0.86,
+        "dist_to_river_m": 1561.2,
+        "hand_m": 9.4,
+        "wetness_index": 4.7,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 18.0,
+        "maxheight": 3.8,
+        "width": 8.0,
+        "geometry": [
+          [
+            91.7319,
+            26.1317
+          ],
+          [
+            91.72789999999999,
+            26.1472
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SARASWATI_GHAT",
+      "v": "N_FORT_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_36",
+        "name": "Yamuna Embankment Road",
+        "highway": "secondary",
+        "length": 3063.6,
+        "speed_kph": 40.0,
+        "travel_time_sec": 275.7,
+        "elevation_m": 79.15,
+        "slope": 0.22,
+        "dist_to_river_m": 261.1,
+        "hand_m": 5.15,
+        "wetness_index": 5.91,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 8.5,
+        "geometry": [
+          [
+            91.7319,
+            26.1317
+          ],
+          [
+            91.7619,
+            26.1367
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SARASWATI_GHAT",
+      "v": "N_KARELI_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_39_rev",
+        "name": "Kareli-Kydganj Riverside Road",
+        "highway": "secondary",
+        "length": 2713.8,
+        "speed_kph": 40.0,
+        "travel_time_sec": 244.2,
+        "elevation_m": 78.4,
+        "slope": 0.19,
+        "dist_to_river_m": 417.3,
+        "hand_m": 4.4,
+        "wetness_index": 6.03,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 3.8,
+        "width": 8.0,
+        "geometry": [
+          [
+            91.7319,
+            26.1317
+          ],
+          [
+            91.7049,
+            26.1327
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_FORT_1",
+      "v": "N_SARASWATI_GHAT",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_36_rev",
+        "name": "Yamuna Embankment Road",
+        "highway": "secondary",
+        "length": 3063.6,
+        "speed_kph": 40.0,
+        "travel_time_sec": 275.7,
+        "elevation_m": 79.15,
+        "slope": 0.22,
+        "dist_to_river_m": 261.1,
+        "hand_m": 5.15,
+        "wetness_index": 5.91,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 8.5,
+        "geometry": [
+          [
+            91.7619,
+            26.1367
+          ],
+          [
+            91.7319,
+            26.1317
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_FORT_1",
+      "v": "N_SANGAM_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_37",
+        "name": "Fort East Sangam Link",
+        "highway": "secondary",
+        "length": 896.2,
+        "speed_kph": 40.0,
+        "travel_time_sec": 80.7,
+        "elevation_m": 80.0,
+        "slope": 0.56,
+        "dist_to_river_m": 282.5,
+        "hand_m": 6.0,
+        "wetness_index": 5.1,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 20.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.7619,
+            26.1367
+          ],
+          [
+            91.7689,
+            26.1417
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SHASTRI_WEST",
+      "v": "N_DARA_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_22_rev",
+        "name": "Shastri Bridge West Incline",
+        "highway": "primary",
+        "length": 321.1,
+        "speed_kph": 50.0,
+        "travel_time_sec": 23.1,
+        "elevation_m": 81.25,
+        "slope": 1.71,
+        "dist_to_river_m": 675.6,
+        "hand_m": 7.25,
+        "wetness_index": 4.04,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 40.0,
+        "maxheight": 4.8,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.76689999999999,
+            26.1507
+          ],
+          [
+            91.76389999999999,
+            26.1497
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SHASTRI_WEST",
+      "v": "N_SHASTRI_DECK",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_27",
+        "name": "Shastri Bridge Ganga Span West",
+        "highway": "trunk",
+        "length": 1570.5,
+        "speed_kph": 65.0,
+        "travel_time_sec": 87.0,
+        "elevation_m": 88.25,
+        "slope": 0.54,
+        "dist_to_river_m": 415.9,
+        "hand_m": 14.25,
+        "wetness_index": 5.13,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 92.5,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.76689999999999,
+            26.1507
+          ],
+          [
+            91.7819,
+            26.1467
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SHASTRI_DECK",
+      "v": "N_SHASTRI_WEST",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_27_rev",
+        "name": "Shastri Bridge Ganga Span West",
+        "highway": "trunk",
+        "length": 1570.5,
+        "speed_kph": 65.0,
+        "travel_time_sec": 87.0,
+        "elevation_m": 88.25,
+        "slope": 0.54,
+        "dist_to_river_m": 415.9,
+        "hand_m": 14.25,
+        "wetness_index": 5.13,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 92.5,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.7819,
+            26.1467
+          ],
+          [
+            91.76689999999999,
+            26.1507
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SHASTRI_DECK",
+      "v": "N_SHASTRI_EAST",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_28",
+        "name": "Shastri Bridge Ganga Span East",
+        "highway": "trunk",
+        "length": 1347.4,
+        "speed_kph": 65.0,
+        "travel_time_sec": 74.6,
+        "elevation_m": 88.75,
+        "slope": 0.56,
+        "dist_to_river_m": 1594.8,
+        "hand_m": 14.75,
+        "wetness_index": 5.1,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 92.5,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.7819,
+            26.1467
+          ],
+          [
+            91.7949,
+            26.1437
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_SHASTRI_EAST",
+      "v": "N_SHASTRI_DECK",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_28_rev",
+        "name": "Shastri Bridge Ganga Span East",
+        "highway": "trunk",
+        "length": 1347.4,
+        "speed_kph": 65.0,
+        "travel_time_sec": 74.6,
+        "elevation_m": 88.75,
+        "slope": 0.56,
+        "dist_to_river_m": 1594.8,
+        "hand_m": 14.75,
+        "wetness_index": 5.1,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 92.5,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.7949,
+            26.1437
+          ],
+          [
+            91.7819,
+            26.1467
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CURZON_SOUTH",
+      "v": "N_ALLEN_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_29_rev",
+        "name": "Teliyarganj Phaphamau Corridor",
+        "highway": "primary",
+        "length": 2260.2,
+        "speed_kph": 50.0,
+        "travel_time_sec": 162.7,
+        "elevation_m": 85.5,
+        "slope": 0.04,
+        "dist_to_river_m": 114.8,
+        "hand_m": 11.5,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7349,
+            26.1937
+          ],
+          [
+            91.74289999999999,
+            26.1747
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CURZON_SOUTH",
+      "v": "N_CURZON_DECK",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_30",
+        "name": "Phaphamau Bridge River Span",
+        "highway": "primary",
+        "length": 834.6,
+        "speed_kph": 50.0,
+        "travel_time_sec": 60.1,
+        "elevation_m": 88.25,
+        "slope": 0.78,
+        "dist_to_river_m": 1535.7,
+        "hand_m": 14.25,
+        "wetness_index": 4.79,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 91.5,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7349,
+            26.1937
+          ],
+          [
+            91.7319,
+            26.2007
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CURZON_DECK",
+      "v": "N_CURZON_SOUTH",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_30_rev",
+        "name": "Phaphamau Bridge River Span",
+        "highway": "primary",
+        "length": 834.6,
+        "speed_kph": 50.0,
+        "travel_time_sec": 60.1,
+        "elevation_m": 88.25,
+        "slope": 0.78,
+        "dist_to_river_m": 1535.7,
+        "hand_m": 14.25,
+        "wetness_index": 4.79,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 91.5,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7319,
+            26.2007
+          ],
+          [
+            91.7349,
+            26.1937
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CURZON_DECK",
+      "v": "N_CURZON_NORTH",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_31",
+        "name": "Phaphamau North Ramp",
+        "highway": "primary",
+        "length": 732.0,
+        "speed_kph": 50.0,
+        "travel_time_sec": 52.7,
+        "elevation_m": 88.75,
+        "slope": 0.75,
+        "dist_to_river_m": 1053.9,
+        "hand_m": 14.75,
+        "wetness_index": 4.83,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7319,
+            26.2007
+          ],
+          [
+            91.7289,
+            26.2067
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_CURZON_NORTH",
+      "v": "N_CURZON_DECK",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_31_rev",
+        "name": "Phaphamau North Ramp",
+        "highway": "primary",
+        "length": 732.0,
+        "speed_kph": 50.0,
+        "travel_time_sec": 52.7,
+        "elevation_m": 88.75,
+        "slope": 0.75,
+        "dist_to_river_m": 1053.9,
+        "hand_m": 14.75,
+        "wetness_index": 4.83,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7289,
+            26.2067
+          ],
+          [
+            91.7319,
+            26.2007
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_NAINI_NORTH",
+      "v": "N_SRN_MAIN",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_32_rev",
+        "name": "SRN to Yamuna Bridge Express Road",
+        "highway": "primary",
+        "length": 1790.4,
+        "speed_kph": 50.0,
+        "travel_time_sec": 128.9,
+        "elevation_m": 88.25,
+        "slope": 0.2,
+        "dist_to_river_m": 1232.0,
+        "hand_m": 14.25,
+        "wetness_index": 5.99,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 35.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7439,
+            26.1357
+          ],
+          [
+            91.7441,
+            26.1518
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_NAINI_NORTH",
+      "v": "N_NAINI_DECK",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_33",
+        "name": "New Yamuna Cable-Stayed Bridge",
+        "highway": "trunk",
+        "length": 1264.7,
+        "speed_kph": 65.0,
+        "travel_time_sec": 70.0,
+        "elevation_m": 88.75,
+        "slope": 0.36,
+        "dist_to_river_m": 299.7,
+        "hand_m": 14.75,
+        "wetness_index": 5.5,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 91.0,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.7439,
+            26.1357
+          ],
+          [
+            91.7499,
+            26.125700000000002
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_NAINI_DECK",
+      "v": "N_NAINI_NORTH",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_33_rev",
+        "name": "New Yamuna Cable-Stayed Bridge",
+        "highway": "trunk",
+        "length": 1264.7,
+        "speed_kph": 65.0,
+        "travel_time_sec": 70.0,
+        "elevation_m": 88.75,
+        "slope": 0.36,
+        "dist_to_river_m": 299.7,
+        "hand_m": 14.75,
+        "wetness_index": 5.5,
+        "is_bridge": true,
+        "bridge_deck_elevation_m": 91.0,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.7499,
+            26.125700000000002
+          ],
+          [
+            91.7439,
+            26.1357
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_NAINI_DECK",
+      "v": "N_NAINI_SOUTH",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_34",
+        "name": "Naini Ramp to Industrial Area",
+        "highway": "trunk",
+        "length": 1508.2,
+        "speed_kph": 65.0,
+        "travel_time_sec": 83.5,
+        "elevation_m": 88.5,
+        "slope": 0.33,
+        "dist_to_river_m": 1678.8,
+        "hand_m": 14.5,
+        "wetness_index": 5.57,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.7499,
+            26.125700000000002
+          ],
+          [
+            91.7569,
+            26.1137
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_NAINI_SOUTH",
+      "v": "N_NAINI_DECK",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_34_rev",
+        "name": "Naini Ramp to Industrial Area",
+        "highway": "trunk",
+        "length": 1508.2,
+        "speed_kph": 65.0,
+        "travel_time_sec": 83.5,
+        "elevation_m": 88.5,
+        "slope": 0.33,
+        "dist_to_river_m": 1678.8,
+        "hand_m": 14.5,
+        "wetness_index": 5.57,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 45.0,
+        "maxheight": 5.0,
+        "width": 16.0,
+        "geometry": [
+          [
+            91.7569,
+            26.1137
+          ],
+          [
+            91.7499,
+            26.125700000000002
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_STATION_1",
+      "v": "N_CIVIL_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_5_rev",
+        "name": "Station Approach Road",
+        "highway": "primary",
+        "length": 886.7,
+        "speed_kph": 50.0,
+        "travel_time_sec": 63.8,
+        "elevation_m": 93.25,
+        "slope": 0.06,
+        "dist_to_river_m": 3206.7,
+        "hand_m": 19.25,
+        "wetness_index": 6.5,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 30.0,
+        "maxheight": 4.5,
+        "width": 12.0,
+        "geometry": [
+          [
+            91.7209,
+            26.1537
+          ],
+          [
+            91.7239,
+            26.1612
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_STATION_1",
+      "v": "N_STATION_2",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_6",
+        "name": "Junction Overbridge Line",
+        "highway": "primary",
+        "length": 389.4,
+        "speed_kph": 50.0,
+        "travel_time_sec": 28.0,
+        "elevation_m": 92.5,
+        "slope": 0.26,
+        "dist_to_river_m": 2613.1,
+        "hand_m": 18.5,
+        "wetness_index": 5.78,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.7209,
+            26.1537
+          ],
+          [
+            91.71889999999999,
+            26.1507
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_STATION_2",
+      "v": "N_STATION_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_6_rev",
+        "name": "Junction Overbridge Line",
+        "highway": "primary",
+        "length": 389.4,
+        "speed_kph": 50.0,
+        "travel_time_sec": 28.0,
+        "elevation_m": 92.5,
+        "slope": 0.26,
+        "dist_to_river_m": 2613.1,
+        "hand_m": 18.5,
+        "wetness_index": 5.78,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.2,
+        "width": 10.0,
+        "geometry": [
+          [
+            91.71889999999999,
+            26.1507
+          ],
+          [
+            91.7209,
+            26.1537
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_STATION_2",
+      "v": "N_KHULDABAD",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_7",
+        "name": "GT Road City Sector",
+        "highway": "primary",
+        "length": 969.1,
+        "speed_kph": 50.0,
+        "travel_time_sec": 69.8,
+        "elevation_m": 91.0,
+        "slope": 0.21,
+        "dist_to_river_m": 2160.5,
+        "hand_m": 17.0,
+        "wetness_index": 5.95,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 40.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.71889999999999,
+            26.1507
+          ],
+          [
+            91.7119,
+            26.1447
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_KHULDABAD",
+      "v": "N_STATION_2",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_7_rev",
+        "name": "GT Road City Sector",
+        "highway": "primary",
+        "length": 969.1,
+        "speed_kph": 50.0,
+        "travel_time_sec": 69.8,
+        "elevation_m": 91.0,
+        "slope": 0.21,
+        "dist_to_river_m": 2160.5,
+        "hand_m": 17.0,
+        "wetness_index": 5.95,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 40.0,
+        "maxheight": 4.5,
+        "width": 14.0,
+        "geometry": [
+          [
+            91.7119,
+            26.1447
+          ],
+          [
+            91.71889999999999,
+            26.1507
+          ]
+        ]
+      }
+    },
+    {
+      "u": "N_KHULDABAD",
+      "v": "N_KARELI_1",
+      "key": 0,
+      "attrs": {
+        "edge_id": "E_8",
+        "name": "Khuldabad-Kareli Link Road",
+        "highway": "secondary",
+        "length": 1508.2,
+        "speed_kph": 40.0,
+        "travel_time_sec": 135.7,
+        "elevation_m": 85.5,
+        "slope": 0.6,
+        "dist_to_river_m": 1603.2,
+        "hand_m": 11.5,
+        "wetness_index": 5.04,
+        "is_bridge": false,
+        "bridge_deck_elevation_m": null,
+        "maxweight": 25.0,
+        "maxheight": 4.0,
+        "width": 9.0,
+        "geometry": [
+          [
+            91.7119,
+            26.1447
+          ],
+          [
+            91.7049,
+            26.1327
+          ]
+        ]
+      }
+    }
+  ]
+}

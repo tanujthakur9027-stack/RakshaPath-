@@ -1,0 +1,364 @@
+# Pan-India Region Registry for Raksh Path
+default_region: "prayagraj"
+
+regions:
+  prayagraj:
+    id: "prayagraj"
+    name: "Prayagraj (Allahabad)"
+    state: "Uttar Pradesh"
+    center:
+      lat: 25.4358
+      lon: 81.8463
+    bbox:
+      min_lat: 25.3900
+      max_lat: 25.4950
+      min_lon: 81.7900
+      max_lon: 81.9250
+    rivers:
+      - name: "Ganga"
+        base_level_m: 74.0
+        warning_level_m: 84.73
+        danger_level_m: 85.73
+      - name: "Yamuna"
+        base_level_m: 74.5
+        warning_level_m: 84.50
+        danger_level_m: 85.50
+    confluence:
+      name: "Triveni Sangam"
+      lat: 25.4299
+      lon: 81.8844
+    terrain:
+      min_elevation_m: 73.5
+      max_elevation_m: 98.0
+      avg_slope_pct: 1.8
+    hospitals:
+      - id: "H-SRN"
+        name: "Swaroop Rani Nehru (SRN) Hospital"
+        lat: 25.4431
+        lon: 81.8542
+        total_beds: 120
+        trauma_beds: 18
+        icu_beds: 24
+        general_beds: 78
+        specialties: ["trauma", "icu", "general", "surgery"]
+      - id: "H-TBS"
+        name: "Tej Bahadur Sapru (Beli) Hospital"
+        lat: 25.4608
+        lon: 81.8475
+        total_beds: 80
+        trauma_beds: 8
+        icu_beds: 12
+        general_beds: 60
+        specialties: ["trauma", "icu", "general"]
+      - id: "H-MLN"
+        name: "Motilal Nehru (MLN) Medical College & Hospital"
+        lat: 25.4410
+        lon: 81.8520
+        total_beds: 150
+        trauma_beds: 22
+        icu_beds: 30
+        general_beds: 98
+        specialties: ["trauma", "icu", "general", "pediatric"]
+      - id: "H-CAN"
+        name: "Military & Cantonment Hospital"
+        lat: 25.4520
+        lon: 81.8210
+        total_beds: 60
+        trauma_beds: 10
+        icu_beds: 8
+        general_beds: 42
+        specialties: ["trauma", "general"]
+      - id: "H-DUF"
+        name: "Dufferin Women & Children Hospital"
+        lat: 25.4385
+        lon: 81.8380
+        total_beds: 50
+        trauma_beds: 4
+        icu_beds: 6
+        general_beds: 40
+        specialties: ["general", "pediatric"]
+    fire_stations:
+      - id: "FS-CIVIL"
+        name: "Civil Lines Central Fire Station"
+        lat: 25.4542
+        lon: 81.8340
+      - id: "FS-COLONEL"
+        name: "Colonelganj Fire Station"
+        lat: 25.4590
+        lon: 81.8610
+      - id: "FS-NAINI"
+        name: "Naini Industrial Fire Station"
+        lat: 25.3980
+        lon: 81.8720
+      - id: "FS-KARELI"
+        name: "Kareli Sub Fire Station"
+        lat: 25.4210
+        lon: 81.8190
+
+  patna:
+    id: "patna"
+    name: "Patna"
+    state: "Bihar"
+    center:
+      lat: 25.6093
+      lon: 85.1376
+    bbox:
+      min_lat: 25.5600
+      max_lat: 25.6600
+      min_lon: 85.0600
+      max_lon: 85.2200
+    rivers:
+      - name: "Ganga"
+        base_level_m: 49.0
+        warning_level_m: 50.00
+        danger_level_m: 50.52
+    terrain:
+      min_elevation_m: 48.0
+      max_elevation_m: 60.0
+      avg_slope_pct: 1.2
+    hospitals:
+      - id: "H-PMCH"
+        name: "Patna Medical College & Hospital (PMCH)"
+        lat: 25.6212
+        lon: 85.1585
+        total_beds: 180
+        trauma_beds: 25
+        icu_beds: 35
+        general_beds: 120
+        specialties: ["trauma", "icu", "general"]
+      - id: "H-AIIMS-P"
+        name: "AIIMS Patna"
+        lat: 25.5620
+        lon: 85.0430
+        total_beds: 200
+        trauma_beds: 30
+        icu_beds: 45
+        general_beds: 125
+        specialties: ["trauma", "icu", "general", "pediatric"]
+    fire_stations:
+      - id: "FS-PAT-CENTRAL"
+        name: "Patna Central Fire Station"
+        lat: 25.6120
+        lon: 85.1410
+
+  guwahati:
+    id: "guwahati"
+    name: "Guwahati"
+    state: "Assam"
+    center:
+      lat: 26.1445
+      lon: 91.7362
+    bbox:
+      min_lat: 26.1000
+      max_lat: 26.2200
+      min_lon: 91.6500
+      max_lon: 91.8200
+    rivers:
+      - name: "Brahmaputra"
+        base_level_m: 47.5
+        warning_level_m: 49.20
+        danger_level_m: 49.68
+    terrain:
+      min_elevation_m: 46.0
+      max_elevation_m: 140.0
+      avg_slope_pct: 4.5
+    hospitals:
+      - id: "H-GMCH"
+        name: "Gauhati Medical College & Hospital"
+        lat: 26.1560
+        lon: 91.7720
+        total_beds: 190
+        trauma_beds: 28
+        icu_beds: 32
+        general_beds: 130
+        specialties: ["trauma", "icu", "general"]
+    fire_stations:
+      - id: "FS-GUW-PANBAZAR"
+        name: "Panbazar Fire Station"
+        lat: 26.1860
+        lon: 91.7470
+
+  mumbai:
+    id: "mumbai"
+    name: "Mumbai"
+    state: "Maharashtra"
+    center:
+      lat: 19.0760
+      lon: 72.8777
+    bbox:
+      min_lat: 18.9800
+      max_lat: 19.1600
+      min_lon: 72.8100
+      max_lon: 72.9500
+    rivers:
+      - name: "Mithi River / Arabian Sea"
+        base_level_m: 2.0
+        warning_level_m: 4.5
+        danger_level_m: 5.5
+    terrain:
+      min_elevation_m: 1.0
+      max_elevation_m: 55.0
+      avg_slope_pct: 2.1
+    hospitals:
+      - id: "H-KEM"
+        name: "KEM Hospital, Parel"
+        lat: 19.0028
+        lon: 72.8427
+        total_beds: 250
+        trauma_beds: 40
+        icu_beds: 50
+        general_beds: 160
+        specialties: ["trauma", "icu", "general"]
+    fire_stations:
+      - id: "FS-BYCULLA"
+        name: "Byculla Fire Station HQ"
+        lat: 18.9740
+        lon: 72.8310
+
+  delhi:
+    id: "delhi"
+    name: "Delhi NCR"
+    state: "Delhi"
+    center:
+      lat: 28.6139
+      lon: 77.2090
+    bbox:
+      min_lat: 28.5000
+      max_lat: 28.7500
+      min_lon: 77.1000
+      max_lon: 77.3500
+    rivers:
+      - name: "Yamuna River"
+        base_level_m: 203.0
+        warning_level_m: 204.5
+        danger_level_m: 205.33
+    terrain:
+      min_elevation_m: 200.0
+      max_elevation_m: 225.0
+      avg_slope_pct: 1.1
+    hospitals:
+      - id: "H-AIIMS-DEL"
+        name: "AIIMS New Delhi"
+        lat: 28.5672
+        lon: 77.2100
+        total_beds: 350
+        trauma_beds: 45
+        icu_beds: 60
+        general_beds: 245
+        specialties: ["trauma", "icu", "general", "pediatric", "surgery"]
+      - id: "H-LNJP"
+        name: "Lok Nayak Jai Prakash (LNJP) Hospital"
+        lat: 28.6360
+        lon: 77.2405
+        total_beds: 250
+        trauma_beds: 30
+        icu_beds: 40
+        general_beds: 180
+        specialties: ["trauma", "icu", "general"]
+      - id: "H-SAF"
+        name: "Safdarjung Hospital"
+        lat: 28.5700
+        lon: 77.2070
+        total_beds: 300
+        trauma_beds: 35
+        icu_beds: 50
+        general_beds: 215
+        specialties: ["trauma", "icu", "general", "surgery"]
+    fire_stations:
+      - id: "FS-CONNAUGHT"
+        name: "Connaught Place Fire Station HQ"
+        lat: 28.6310
+        lon: 77.2190
+
+  chennai:
+    id: "chennai"
+    name: "Chennai"
+    state: "Tamil Nadu"
+    center:
+      lat: 13.0827
+      lon: 80.2707
+    bbox:
+      min_lat: 12.9500
+      max_lat: 13.1800
+      min_lon: 80.1500
+      max_lon: 80.3200
+    rivers:
+      - name: "Adyar & Cooum Rivers"
+        base_level_m: 3.0
+        warning_level_m: 6.0
+        danger_level_m: 7.5
+    terrain:
+      min_elevation_m: 2.0
+      max_elevation_m: 40.0
+      avg_slope_pct: 1.5
+    hospitals:
+      - id: "H-RGGGH"
+        name: "Rajiv Gandhi Government General Hospital"
+        lat: 13.0810
+        lon: 80.2780
+        total_beds: 280
+        trauma_beds: 35
+        icu_beds: 45
+        general_beds: 200
+        specialties: ["trauma", "icu", "general", "surgery"]
+      - id: "H-STANLEY"
+        name: "Government Stanley Medical College Hospital"
+        lat: 13.1070
+        lon: 80.2870
+        total_beds: 220
+        trauma_beds: 25
+        icu_beds: 30
+        general_beds: 165
+        specialties: ["trauma", "icu", "general"]
+    fire_stations:
+      - id: "FS-EGMORE"
+        name: "Egmore Central Fire Station"
+        lat: 13.0780
+        lon: 80.2610
+
+  kolkata:
+    id: "kolkata"
+    name: "Kolkata"
+    state: "West Bengal"
+    center:
+      lat: 22.5726
+      lon: 88.3639
+    bbox:
+      min_lat: 22.4500
+      max_lat: 22.6800
+      min_lon: 88.2500
+      max_lon: 88.4500
+    rivers:
+      - name: "Hooghly River"
+        base_level_m: 4.0
+        warning_level_m: 6.8
+        danger_level_m: 7.8
+    terrain:
+      min_elevation_m: 3.0
+      max_elevation_m: 18.0
+      avg_slope_pct: 0.8
+    hospitals:
+      - id: "H-SSKM"
+        name: "SSKM Hospital & IPGMER"
+        lat: 22.5390
+        lon: 88.3440
+        total_beds: 260
+        trauma_beds: 30
+        icu_beds: 40
+        general_beds: 190
+        specialties: ["trauma", "icu", "general", "surgery"]
+      - id: "H-CAL-MED"
+        name: "Calcutta Medical College Hospital"
+        lat: 22.5740
+        lon: 88.3620
+        total_beds: 240
+        trauma_beds: 25
+        icu_beds: 35
+        general_beds: 180
+        specialties: ["trauma", "icu", "general"]
+    fire_stations:
+      - id: "FS-FREE-SCHOOL"
+        name: "Central Fire Station HQ, Free School St"
+        lat: 22.5560
+        lon: 88.3550
+

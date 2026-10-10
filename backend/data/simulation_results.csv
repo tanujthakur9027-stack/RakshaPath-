@@ -1,0 +1,3 @@
+System,Mean_Response_Time_Min,P90_Response_Time_Min,Blocked_Routes,Hospital_Mismatches
+Baseline (Naive),9.9,24.3,0,4
+Raksh Path (Flood-Aware),11.4,18.0,0,0

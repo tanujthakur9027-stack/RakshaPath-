@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-10-10T10:30:00Z",
+  "scenario_id": "heavy_monsoon",
+  "total_incidents": 25,
+  "metrics": {
+    "baseline": {
+      "mean_response_time_minutes": 9.9,
+      "p90_response_time_minutes": 24.3,
+      "blocked_routes_count": 0,
+      "blocked_routes_pct": 0.0,
+      "hospital_capacity_mismatches": 4,
+      "capacity_mismatch_pct": 16.0,
+      "completed_incidents": 25
+    },
+    "raksh_path": {
+      "mean_response_time_minutes": 11.4,
+      "p90_response_time_minutes": 18.0,
+      "blocked_routes_count": 0,
+      "blocked_routes_pct": 0.0,
+      "hospital_capacity_mismatches": 0,
+      "capacity_mismatch_pct": 0.0,
+      "completed_incidents": 25
+    },
+    "improvement": {
+      "mean_response_time_reduction_pct": -15.2,
+      "p90_response_time_reduction_pct": 25.9,
+      "blocked_routes_eliminated": 0,
+      "diversions_prevented": 4
+    }
+  },
+  "sample_incidents_preview": [
+    {
+      "id": "SIM-INC-001",
+      "arrival_time_min": 8.1,
+      "lat": 25.43523,
+      "lon": 81.82092,
+      "location_name": "Khuldabad GT Road Crossing",
+      "zone_type": "urban",
+      "incident_type": "medical_emergency",
+      "required_specialty": "general",
+      "severity": 3
+    },
+    {
+      "id": "SIM-INC-002",
+      "arrival_time_min": 27.6,
+      "lat": 25.42849,
+      "lon": 81.88356,
+      "location_name": "Triveni Sangam Ghat",
+      "zone_type": "lowland",
+      "incident_type": "medical_emergency",
+      "required_specialty": "general",
+      "severity": 2
+    },
+    {
+      "id": "SIM-INC-003",
+      "arrival_time_min": 36.2,
+      "lat": 25.44616,
+      "lon": 81.85927,
+      "location_name": "Georgetown Crossing",
+      "zone_type": "urban",
+      "incident_type": "medical_emergency",
+      "required_specialty": "trauma",
+      "severity": 4
+    },
+    {
+      "id": "SIM-INC-004",
+      "arrival_time_min": 42.1,
+      "lat": 25.43752,
+      "lon": 81.87997,
+      "location_name": "Daraganj Riverbank Ghat",
+      "zone_type": "lowland",
+      "incident_type": "trauma_severe",
+      "required_specialty": "trauma",
+      "severity": 5
+    },
+    {
+      "id": "SIM-INC-005",
+      "arrival_time_min": 43.2,
+      "lat": 25.41679,
+      "lon": 81.81104,
+      "location_name": "Kareli Lowland Embankment",
+      "zone_type": "lowland",
+      "incident_type": "medical_emergency",
+      "required_specialty": "general",
+      "severity": 5
+    }
+  ]
+}

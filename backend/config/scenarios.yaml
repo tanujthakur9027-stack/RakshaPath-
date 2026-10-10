@@ -1,0 +1,61 @@
+# Multi-Hazard Disaster Scenarios for Raksh Path
+# Supports Floods, Earthquakes, Cyclones, and Landslides across India
+
+scenarios:
+  # 1. Flood Disaster Scenarios
+  heavy_monsoon:
+    id: "heavy_monsoon"
+    disaster_type: "flood"
+    name: "Severe Monsoon Inundation"
+    description: "Prolonged monsoon rainfall causing severe urban waterlogging and rising river levels."
+    intensity: 1.2
+    rainfall_hourly_mm: [25.0, 55.0, 78.0, 65.0, 42.0, 30.0, 18.0]
+    river_surge_hourly_m: [0.30, 0.75, 1.40, 2.10, 2.60, 2.90, 3.10]
+    soil_saturation_initial: 0.70
+    infiltration_rate_mm_h: 4.5
+
+  extreme_surge:
+    id: "extreme_surge"
+    disaster_type: "flood"
+    name: "100-Year Confluence River Surge"
+    description: "Catastrophic river surge; river exceeds danger marks, submerging low-lying road networks."
+    intensity: 1.8
+    rainfall_hourly_mm: [45.0, 85.0, 120.0, 105.0, 80.0, 60.0, 45.0]
+    river_surge_hourly_m: [0.80, 1.90, 3.20, 4.50, 5.80, 6.70, 7.20]
+    soil_saturation_initial: 0.90
+    infiltration_rate_mm_h: 2.0
+
+  # 2. Earthquake Disaster Scenario
+  earthquake_m68:
+    id: "earthquake_m68"
+    disaster_type: "earthquake"
+    name: "Major Seismic Tremor (Magnitude 6.8)"
+    description: "Strong seismic shaking causing building debris, structural cracks on flyovers, and pipeline breaks."
+    intensity: 1.5
+    peak_ground_acceleration_g: 0.38
+    structural_crack_probability: 0.35
+    rainfall_hourly_mm: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    river_surge_hourly_m: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+  # 3. Cyclone & Windstorm Scenario
+  cyclone_cat3:
+    id: "cyclone_cat3"
+    disaster_type: "cyclone"
+    name: "Category-3 Very Severe Cyclone"
+    description: "Gale-force winds exceeding 140 km/h with uprooted trees, collapsed utility poles, and debris blockages."
+    intensity: 1.6
+    sustained_wind_speed_kph: 145.0
+    tree_fall_probability: 0.42
+    rainfall_hourly_mm: [35.0, 60.0, 85.0, 70.0, 40.0, 20.0, 10.0]
+    river_surge_hourly_m: [0.4, 0.9, 1.6, 2.2, 2.5, 2.6, 2.5]
+
+  # 4. Landslide & Rockfall Scenario
+  landslide_monsoon:
+    id: "landslide_monsoon"
+    disaster_type: "landslide"
+    name: "Monsoon Mountain Slope Failure"
+    description: "Saturated hill slopes triggering rockfalls, mudflows, and blocked highway passes."
+    intensity: 1.4
+    slope_instability_index: 0.78
+    rainfall_hourly_mm: [30.0, 65.0, 90.0, 60.0, 35.0, 15.0, 5.0]
+    river_surge_hourly_m: [0.2, 0.5, 1.0, 1.4, 1.6, 1.7, 1.6]

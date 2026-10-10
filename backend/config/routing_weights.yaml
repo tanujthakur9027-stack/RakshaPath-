@@ -1,0 +1,31 @@
+# Routing and Dispatch Optimization Weights
+
+routing:
+  # Lambda multipliers for cost = travel_time_sec + lambda(severity) * (-ln(pass_prob))
+  severity_lambda:
+    1: 25.0    # Minor / non-critical: optimizes for speed, accepts moderate puddle risk
+    2: 60.0    # Moderate
+    3: 120.0   # Urgent
+    4: 220.0   # Severe / high risk
+    5: 350.0   # Critical / life-threatening: strictly enforces high-reliability dry roads
+
+  # Minimum allowable reliability before triggering alert / auto-reroute
+  alert_reliability_threshold: 0.70
+  critical_reliability_threshold: 0.50
+
+  # Backup route generation parameters
+  backup_route:
+    # Multiplier penalty applied to edges that appeared on the primary route
+    primary_edge_penalty_multiplier: 4.5
+    # Extra penalty on edges with pass probability < 0.85
+    risk_edge_penalty_multiplier: 6.0
+    # Minimum required topological diversity (% of different edges)
+    min_diversity_ratio: 0.35
+
+dispatch:
+  # Multi-objective weights for Hungarian joint matching
+  # Minimize: w_unit_to_incident * ETA_ui + w_incident_to_hosp * ETA_ih + w_unreliability * (1 - R)
+  weight_unit_to_incident_eta: 1.0
+  weight_incident_to_hospital_eta: 0.9
+  weight_unreliability_penalty: 250.0
+  weight_severity_multiplier: 1.5

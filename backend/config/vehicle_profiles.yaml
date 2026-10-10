@@ -1,0 +1,61 @@
+# Vehicle Profiles and Operational Constraints for Raksh Path
+# Safe wading depths, speed characteristics, and physical constraint limits
+
+profiles:
+  ambulance:
+    class_id: "ambulance"
+    display_name: "Emergency Ambulance (108/ALS)"
+    safe_wading_depth_m: 0.30     # 30 cm
+    critical_wading_depth_m: 0.45 # Impassable threshold
+    soft_transition_k: 18.0       # Sigmoid steepness
+    avg_speed_kph: 45.0
+    flood_speed_penalty_factor: 0.65
+    max_weight_tonnes: 3.5
+    max_height_m: 2.8
+    min_road_width_m: 2.5
+    capabilities: ["medical_standard", "medical_als", "trauma_transport"]
+    fleet_count_default: 15
+
+  fire_tender:
+    class_id: "fire_tender"
+    display_name: "State Fire & Rescue Tender"
+    safe_wading_depth_m: 0.50     # 50 cm
+    critical_wading_depth_m: 0.70
+    soft_transition_k: 15.0
+    avg_speed_kph: 38.0
+    flood_speed_penalty_factor: 0.70
+    max_weight_tonnes: 16.0
+    max_height_m: 3.6
+    min_road_width_m: 3.2
+    capabilities: ["fire_fighting", "debris_clearance", "structural_collapse", "heavy_rescue"]
+    fleet_count_default: 6
+
+  rescue_truck:
+    class_id: "rescue_truck"
+    display_name: "SDRF/NDRF 4x4 High-Clearance Rescue Truck"
+    safe_wading_depth_m: 0.60     # 60 cm
+    critical_wading_depth_m: 0.85
+    soft_transition_k: 12.0
+    avg_speed_kph: 35.0
+    flood_speed_penalty_factor: 0.80
+    max_weight_tonnes: 12.0
+    max_height_m: 3.2
+    min_road_width_m: 2.8
+    capabilities: ["flood_evacuation", "trapped_citizens", "rough_terrain", "structural_collapse"]
+    fleet_count_default: 4
+
+  boat_truck:
+    class_id: "boat_truck"
+    display_name: "NDRF Inflatable Motor Boat (IRB) Carrier"
+    safe_wading_depth_m: 0.60     # 60 cm for the carrier truck
+    critical_wading_depth_m: 1.20 # Can deploy motorized boats into deeper water (>0.60m)
+    soft_transition_k: 10.0
+    avg_speed_kph: 32.0
+    flood_speed_penalty_factor: 0.75
+    max_weight_tonnes: 8.5
+    max_height_m: 3.0
+    min_road_width_m: 2.8
+    capabilities: ["water_rescue", "deep_submergence_evacuation", "riverine_rescue"]
+    can_deploy_boat: true
+    boat_launch_min_depth_m: 0.40
+    fleet_count_default: 2
