@@ -9,6 +9,8 @@ import CivilianSOSModal from './components/CivilianSOSModal';
 import GuideModal from './components/GuideModal';
 import AuthModal from './components/AuthModal';
 import HackathonPitchModal from './components/HackathonPitchModal';
+import NationalAlertTicker from './components/NationalAlertTicker';
+import MissionReportModal from './components/MissionReportModal';
 import { api } from './api/client';
 import { CITY_PRESETS, NETWORK_NODES, VEHICLE_PROFILES } from './api/embeddedEngine';
 
@@ -38,11 +40,13 @@ export default function App() {
   const [incidents, setIncidents] = useState([]);
   const [mapCenter, setMapCenter] = useState([80.9462, 26.8467]);
 
-  // Modals
+  // Modals & Telemetry
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isSOSOpen, setIsSOSOpen] = useState(false);
   const [isGuideOpen, setIsGuideOpen] = useState(false);
   const [isPitchOpen, setIsPitchOpen] = useState(false);
+  const [isReportOpen, setIsReportOpen] = useState(false);
+  const [vehicleLivePos, setVehicleLivePos] = useState(null);
   const [selectedIncident, setSelectedIncident] = useState(null);
 
   // States & Districts derived from NETWORK_NODES
@@ -245,6 +249,12 @@ export default function App() {
         onOpenHackathonPitch={() => setIsPitchOpen(true)}
       />
 
+      {/* Real-Time National CWC/NDMA Telemetry Ticker */}
+      <NationalAlertTicker
+        currentRegion={currentCityId}
+        disasterType={disasterType}
+      />
+
       {/* 2. Main Workspace Layout */}
       <div className="flex flex-1 overflow-hidden relative">
         {/* Left Docked Tactical Sidebar */}
@@ -280,6 +290,10 @@ export default function App() {
           <RouteMetricsHUD
             routeData={routeData}
             vehicleProfile={VEHICLE_PROFILES[vehicleType]}
+            originName={originName}
+            destName={destName}
+            onOpenReport={() => setIsReportOpen(true)}
+            onVehiclePositionUpdate={setVehicleLivePos}
           />
 
           {/* Interactive OpenStreetMap Map Libre View */}
@@ -296,6 +310,8 @@ export default function App() {
               destCoords={destCoords}
               originName={originName}
               destName={destName}
+              vehicleLivePos={vehicleLivePos}
+              vehicleProfile={VEHICLE_PROFILES[vehicleType]}
             />
 
             {/* Civilian Mode Overlay Card */}
@@ -380,6 +396,19 @@ export default function App() {
         isCivilianMode={isCivilianMode}
         onToggleCivilianMode={() => setIsCivilianMode(!isCivilianMode)}
         onOpenSOS={() => setIsSOSOpen(true)}
+      />
+
+      <MissionReportModal
+        isOpen={isReportOpen}
+        onClose={() => setIsReportOpen(false)}
+        routeData={routeData}
+        selectedState={selectedState}
+        selectedDistrict={selectedDistrict}
+        originName={originName}
+        destName={destName}
+        vehicleType={vehicleType}
+        vehicleProfile={VEHICLE_PROFILES[vehicleType]}
+        disasterType={disasterType}
       />
     </div>
   );

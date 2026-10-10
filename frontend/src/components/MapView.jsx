@@ -1,7 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as maplibregl from 'maplibre-gl';
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
-import { Layers, Compass, Maximize2, ShieldAlert, CheckCircle2, AlertTriangle, XCircle, Info, MapPin } from 'lucide-react';
+import {
+  Layers,
+  Compass,
+  Maximize2,
+  Minimize2,
+  ShieldAlert,
+  CheckCircle2,
+  AlertTriangle,
+  XCircle,
+  Info,
+  MapPin,
+  Satellite,
+  Map as MapIcon
+} from 'lucide-react';
 
 if (maplibregl.setWorkerUrl) {
   maplibregl.setWorkerUrl(maplibreWorkerUrl);
@@ -18,12 +31,16 @@ export default function MapView({
   originCoords = null,
   destCoords = null,
   originName = 'Origin',
-  destName = 'Destination'
+  destName = 'Destination',
+  vehicleLivePos = null,
+  vehicleProfile
 }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const markersRef = useRef({ hospitals: [], fleet: [], incidents: [], endpoints: [] });
+  const markersRef = useRef({ hospitals: [], fleet: [], incidents: [], endpoints: [], vehicleBeacon: null });
   const [activePopupInfo, setActivePopupInfo] = useState(null);
+  const [mapStyleMode, setMapStyleMode] = useState('tactical'); // 'tactical' | 'satellite'
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // 1. Initialize MapLibre
   useEffect(() => {
@@ -40,8 +57,22 @@ export default function MapView({
             tileSize: 256,
             attribution: '&copy; OpenStreetMap contributors',
           },
+          'satellite-tiles': {
+            type: 'raster',
+            tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+            tileSize: 256,
+            attribution: '&copy; Esri World Imagery',
+          },
         },
         layers: [
+          {
+            id: 'satellite-tiles-layer',
+            type: 'raster',
+            source: 'satellite-tiles',
+            minzoom: 0,
+            maxzoom: 19,
+            layout: { visibility: 'none' },
+          },
           {
             id: 'osm-tiles-layer',
             type: 'raster',
@@ -53,6 +84,7 @@ export default function MapView({
               'raster-contrast': 0.12,
               'raster-saturation': -0.35,
             },
+            layout: { visibility: 'visible' },
           },
         ],
       },
@@ -119,7 +151,19 @@ export default function MapView({
     };
   }, []);
 
-  // 2. Pan/FlyTo when regionCenter changes
+  // 2. Toggle Map Base Layer (Tactical vs Satellite)
+  useEffect(() => {
+    if (!map.current) return;
+    const isSat = mapStyleMode === 'satellite';
+    if (map.current.getLayer('satellite-tiles-layer')) {
+      map.current.setLayoutProperty('satellite-tiles-layer', 'visibility', isSat ? 'visible' : 'none');
+    }
+    if (map.current.getLayer('osm-tiles-layer')) {
+      map.current.setLayoutProperty('osm-tiles-layer', 'visibility', isSat ? 'none' : 'visible');
+    }
+  }, [mapStyleMode]);
+
+  // 3. Pan/FlyTo when regionCenter changes
   useEffect(() => {
     if (!map.current) return;
     map.current.flyTo({
@@ -130,7 +174,7 @@ export default function MapView({
     });
   }, [regionCenter]);
 
-  // 3. Update Routes (Safe Corridor & Naive Path)
+  // 4. Update Routes (Safe Corridor & Naive Path)
   useEffect(() => {
     if (!map.current) return;
     const safeSrc = map.current.getSource('safe-corridor');
@@ -185,7 +229,31 @@ export default function MapView({
     }
   }, [routeData]);
 
-  // 4. Update Markers: Hospitals, Fleet, Incidents, Endpoints
+  // 5. Update Live Vehicle GPS Beacon Marker
+  useEffect(() => {
+    if (!map.current) return;
+
+    if (markersRef.current.vehicleBeacon) {
+      markersRef.current.vehicleBeacon.remove();
+      markersRef.current.vehicleBeacon = null;
+    }
+
+    if (vehicleLivePos) {
+      const el = document.createElement('div');
+      el.className =
+        'flex items-center justify-center w-9 h-9 rounded-full bg-cyan-500 border-2 border-white shadow-2xl shadow-cyan-400 ring-4 ring-cyan-400/50 transform animate-pulse cursor-pointer';
+      const icon = vehicleProfile?.is_amphibious ? '🚤' : '🚑';
+      el.innerHTML = `<span style="font-size: 16px;">${icon}</span>`;
+
+      const beaconMarker = new maplibregl.Marker({ element: el })
+        .setLngLat(vehicleLivePos)
+        .addTo(map.current);
+
+      markersRef.current.vehicleBeacon = beaconMarker;
+    }
+  }, [vehicleLivePos, vehicleProfile]);
+
+  // 6. Update Static Markers (Hospitals, Fleet, Incidents, Endpoints)
   useEffect(() => {
     if (!map.current) return;
 
@@ -194,7 +262,13 @@ export default function MapView({
     markersRef.current.fleet.forEach((m) => m.remove());
     markersRef.current.incidents.forEach((m) => m.remove());
     markersRef.current.endpoints.forEach((m) => m.remove());
-    markersRef.current = { hospitals: [], fleet: [], incidents: [], endpoints: [] };
+    markersRef.current = {
+      ...markersRef.current,
+      hospitals: [],
+      fleet: [],
+      incidents: [],
+      endpoints: []
+    };
 
     // 1. Hospital / Shelter Markers
     (Array.isArray(hospitals) ? hospitals : []).forEach((h) => {
@@ -308,15 +382,68 @@ export default function MapView({
     }
   }, [hospitals, fleet, incidents, selectedIncident, originCoords, destCoords]);
 
+  // Fullscreen toggle
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      mapContainer.current?.requestFullscreen?.();
+      setIsFullscreen(true);
+    } else {
+      document.exitFullscreen?.();
+      setIsFullscreen(false);
+    }
+  };
+
   return (
     <div className="relative w-full h-full overflow-hidden bg-slate-950">
       {/* Map Element */}
       <div ref={mapContainer} className="w-full h-full" />
 
+      {/* Top-Right GIS Layer & View Controls */}
+      <div className="absolute top-4 right-4 z-10 flex items-center gap-2 select-none">
+        {/* Layer Mode Toggle (Tactical Dark vs Satellite) */}
+        <div className="bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl p-1 flex items-center gap-1 shadow-xl">
+          <button
+            onClick={() => setMapStyleMode('tactical')}
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
+              mapStyleMode === 'tactical'
+                ? 'bg-cyan-500 text-slate-950 font-bold shadow'
+                : 'text-slate-400 hover:text-white hover:bg-slate-800'
+            }`}
+            title="Tactical Dark Map"
+          >
+            <MapIcon className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Tactical</span>
+          </button>
+
+          <button
+            onClick={() => setMapStyleMode('satellite')}
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
+              mapStyleMode === 'satellite'
+                ? 'bg-cyan-500 text-slate-950 font-bold shadow'
+                : 'text-slate-400 hover:text-white hover:bg-slate-800'
+            }`}
+            title="Satellite Imagery Layer"
+          >
+            <Satellite className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Satellite</span>
+          </button>
+        </div>
+
+        {/* Fullscreen Button */}
+        <button
+          onClick={toggleFullscreen}
+          className="p-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 hover:bg-slate-800 rounded-xl text-slate-300 hover:text-white shadow-xl transition"
+          title={isFullscreen ? 'Exit Fullscreen' : 'View Fullscreen Map'}
+        >
+          {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+        </button>
+      </div>
+
       {/* Map Legend Overlay */}
       <div className="absolute bottom-4 left-4 z-10 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl p-2.5 shadow-xl text-white text-xs select-none">
-        <div className="font-bold text-[11px] uppercase tracking-wider text-slate-400 mb-1.5">
-          Map Legend
+        <div className="font-bold text-[11px] uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
+          <span>Map Intelligence</span>
+          <span className="text-[10px] text-cyan-400 font-mono">LIVE GIS</span>
         </div>
         <div className="space-y-1">
           <div className="flex items-center gap-2">
@@ -328,9 +455,9 @@ export default function MapView({
             <span className="text-[11px] font-medium text-slate-400">Naive Shortest Path (Hazard Risk)</span>
           </div>
           <div className="flex items-center gap-2 pt-1 border-t border-slate-800 text-[10px] text-slate-400">
-            <span>⚠️ Active Hazard</span>
-            <span>🏥 Verified Shelter</span>
-            <span>🚑 Rescue Fleet</span>
+            <span>⚠️ Hazard Pin</span>
+            <span>🏥 Verified Bed Hub</span>
+            <span>🚑 Staged Unit</span>
           </div>
         </div>
       </div>
