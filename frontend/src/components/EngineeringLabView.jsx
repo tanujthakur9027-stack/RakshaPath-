@@ -13,7 +13,8 @@ import {
   ChevronRight,
   TrendingDown,
   Waves,
-  FileText
+  FileText,
+  CheckCircle2
 } from 'lucide-react';
 
 export default function EngineeringLabView({ onSwitchToOfficer }) {
