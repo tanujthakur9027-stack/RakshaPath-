@@ -11,10 +11,41 @@ import AuthModal from './components/AuthModal';
 import HackathonPitchModal from './components/HackathonPitchModal';
 import NationalAlertTicker from './components/NationalAlertTicker';
 import MissionReportModal from './components/MissionReportModal';
+import IntroLandingPage from './components/IntroLandingPage';
+import CitizenPortalView from './components/CitizenPortalView';
+import FleetTerminalView from './components/FleetTerminalView';
+import EngineeringLabView from './components/EngineeringLabView';
 import { api } from './api/client';
 import { CITY_PRESETS, NETWORK_NODES, VEHICLE_PROFILES } from './api/embeddedEngine';
 
 export default function App() {
+  // Navigation / Page View State (Senior Google SDE Multi-Page Architecture)
+  const getInitialView = () => {
+    const hash = window.location.hash.replace('#/', '').replace('#', '');
+    if (['landing', 'officer', 'citizen', 'crew', 'simulation'].includes(hash)) {
+      return hash;
+    }
+    return 'landing'; // Default to Google-grade Intro & Login Portal
+  };
+
+  const [activeView, setActiveView] = useState(getInitialView);
+
+  const handleSelectView = (view) => {
+    setActiveView(view);
+    window.location.hash = `#/${view}`;
+  };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#/', '').replace('#', '');
+      if (['landing', 'officer', 'citizen', 'crew', 'simulation'].includes(hash)) {
+        setActiveView(hash);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   // 1. Core State
   const [currentCityId, setCurrentCityId] = useState('lucknow');
   const [disasterType, setDisasterType] = useState('flood');
@@ -232,14 +263,22 @@ export default function App() {
 
   return (
     <div className="flex flex-col h-screen w-screen bg-slate-950 font-sans overflow-hidden text-slate-100">
-      {/* 1. Top Hero Header Bar */}
+      {/* 1. Top Hero Header Bar with Multi-Page Tabs */}
       <Header
         currentRegion={currentCityId}
         onSelectCity={handleSelectCity}
         disasterType={disasterType}
         onSelectDisaster={setDisasterType}
-        isCivilianMode={isCivilianMode}
-        onToggleMode={() => setIsCivilianMode(!isCivilianMode)}
+        isCivilianMode={activeView === 'citizen' || isCivilianMode}
+        onToggleMode={() => {
+          if (activeView === 'citizen') {
+            setIsCivilianMode(false);
+            handleSelectView('officer');
+          } else {
+            setIsCivilianMode(true);
+            handleSelectView('citizen');
+          }
+        }}
         onSearchSelect={handleSearchSelect}
         onGeolocate={handleGeolocate}
         currentRole={currentRole}
@@ -247,110 +286,174 @@ export default function App() {
         onOpenSOS={() => setIsSOSOpen(true)}
         onOpenGuide={() => setIsGuideOpen(true)}
         onOpenHackathonPitch={() => setIsPitchOpen(true)}
+        activeView={activeView}
+        onSelectView={handleSelectView}
       />
 
-      {/* Real-Time National CWC/NDMA Telemetry Ticker */}
-      <NationalAlertTicker
-        currentRegion={currentCityId}
-        disasterType={disasterType}
-      />
-
-      {/* 2. Main Workspace Layout */}
-      <div className="flex flex-1 overflow-hidden relative">
-        {/* Left Docked Tactical Sidebar */}
-        <TacticalSidebar
-          statesList={statesList}
-          selectedState={selectedState}
-          onSelectState={handleSelectState}
-          selectedDistrict={selectedDistrict}
-          districtsList={districtsList}
-          onSelectDistrict={handleSelectDistrict}
-          nodes={currentNodes.length > 0 ? currentNodes : Object.entries(NETWORK_NODES).map(([id, n]) => ({ id, ...n }))}
-          originNode={originNodeId}
-          onSelectOrigin={setOriginNodeId}
-          destNode={destNodeId}
-          onSelectDest={setDestNodeId}
-          vehicleType={vehicleType}
-          onSelectVehicle={setVehicleType}
-          waterDepth={waterDepth}
-          onChangeWaterDepth={setWaterDepth}
-          damageLevel={damageLevel}
-          onChangeDamageLevel={setDamageLevel}
-          debrisLevel={debrisLevel}
-          onChangeDebrisLevel={setDebrisLevel}
-          vehicleEval={vehicleEval}
-          onOpenSOS={() => setIsSOSOpen(true)}
-          onOpenAuth={() => setIsAuthOpen(true)}
+      {/* 2. Multi-Page Router View */}
+      {activeView === 'landing' && (
+        <IntroLandingPage
+          onSelectView={handleSelectView}
+          onSelectRole={setCurrentRole}
           currentRole={currentRole}
+          onSelectCity={handleSelectCity}
+          onApplyScenario={handleApplyScenario}
+          currentCityId={currentCityId}
         />
+      )}
 
-        {/* Center/Right Map & Analytics Zone */}
-        <div className="flex-1 flex flex-col relative overflow-hidden">
-          {/* Floating HUD Metrics directly over map */}
-          <RouteMetricsHUD
-            routeData={routeData}
-            vehicleProfile={VEHICLE_PROFILES[vehicleType]}
-            originName={originName}
-            destName={destName}
-            onOpenReport={() => setIsReportOpen(true)}
-            onVehiclePositionUpdate={setVehicleLivePos}
+      {activeView === 'citizen' && (
+        <CitizenPortalView
+          currentCityId={currentCityId}
+          selectedState={selectedState}
+          selectedDistrict={selectedDistrict}
+          routeData={routeData}
+          hospitals={hospitals}
+          fleet={fleet}
+          incidents={incidents}
+          mapCenter={mapCenter}
+          originCoords={originCoords}
+          destCoords={destCoords}
+          originName={originName}
+          destName={destName}
+          onOpenSOS={() => setIsSOSOpen(true)}
+          onGeolocate={handleGeolocate}
+          disasterType={disasterType}
+          onReportIncident={handleReportIncident}
+          onSwitchToOfficer={() => handleSelectView('officer')}
+        />
+      )}
+
+      {activeView === 'crew' && (
+        <FleetTerminalView
+          routeData={routeData}
+          hospitals={hospitals}
+          fleet={fleet}
+          incidents={incidents}
+          mapCenter={mapCenter}
+          originCoords={originCoords}
+          destCoords={destCoords}
+          originName={originName}
+          destName={destName}
+          vehicleType={vehicleType}
+          onReportIncident={handleReportIncident}
+          selectedState={selectedState}
+          selectedDistrict={selectedDistrict}
+        />
+      )}
+
+      {activeView === 'simulation' && (
+        <EngineeringLabView
+          onSwitchToOfficer={() => handleSelectView('officer')}
+        />
+      )}
+
+      {activeView === 'officer' && (
+        <>
+          {/* Real-Time National CWC/NDMA Telemetry Ticker */}
+          <NationalAlertTicker
+            currentRegion={currentCityId}
+            disasterType={disasterType}
           />
 
-          {/* Interactive OpenStreetMap Map Libre View */}
-          <div className="flex-1 relative">
-            <MapView
-              regionCenter={mapCenter}
-              routeData={routeData}
-              hospitals={hospitals}
-              fleet={fleet}
-              incidents={incidents}
-              selectedIncident={selectedIncident}
-              onSelectIncident={setSelectedIncident}
-              originCoords={originCoords}
-              destCoords={destCoords}
-              originName={originName}
-              destName={destName}
-              vehicleLivePos={vehicleLivePos}
-              vehicleProfile={VEHICLE_PROFILES[vehicleType]}
+          {/* Main Tactical Command Layout */}
+          <div className="flex flex-1 overflow-hidden relative">
+            {/* Left Docked Tactical Sidebar */}
+            <TacticalSidebar
+              statesList={statesList}
+              selectedState={selectedState}
+              onSelectState={handleSelectState}
+              selectedDistrict={selectedDistrict}
+              districtsList={districtsList}
+              onSelectDistrict={handleSelectDistrict}
+              nodes={currentNodes.length > 0 ? currentNodes : Object.entries(NETWORK_NODES).map(([id, n]) => ({ id, ...n }))}
+              originNode={originNodeId}
+              onSelectOrigin={setOriginNodeId}
+              destNode={destNodeId}
+              onSelectDest={setDestNodeId}
+              vehicleType={vehicleType}
+              onSelectVehicle={setVehicleType}
+              waterDepth={waterDepth}
+              onChangeWaterDepth={setWaterDepth}
+              damageLevel={damageLevel}
+              onChangeDamageLevel={setDamageLevel}
+              debrisLevel={debrisLevel}
+              onChangeDebrisLevel={setDebrisLevel}
+              vehicleEval={vehicleEval}
+              onOpenSOS={() => setIsSOSOpen(true)}
+              onOpenAuth={() => setIsAuthOpen(true)}
+              currentRole={currentRole}
             />
 
-            {/* Civilian Mode Overlay Card */}
-            {isCivilianMode && (
-              <div className="absolute top-20 right-4 z-30 max-w-sm pointer-events-auto">
-                <CivilianSafetyCard
-                  recommendation={routeData ? {
-                    primary_route: {
-                      travel_time_min: routeData.safe_corridor?.estimated_transit_time_min || 15,
-                      total_length_km: routeData.safe_corridor?.total_distance_km || 10,
-                      max_water_depth_m: (waterDepth * 0.3) / 100
-                    },
-                    assigned_hospital: {
-                      name: destName,
-                      beds_trauma_avail: 16,
-                      beds_icu_avail: 18,
-                      beds_general_avail: 72
-                    },
-                    assigned_vehicle: {
-                      callsign: 'Verified Emergency Corridor'
-                    }
-                  } : null}
-                  disasterType={disasterType}
-                  onOpenSOS={() => setIsSOSOpen(true)}
-                />
-              </div>
-            )}
-          </div>
+            {/* Center/Right Map & Analytics Zone */}
+            <div className="flex-1 flex flex-col relative overflow-hidden">
+              {/* Floating HUD Metrics directly over map */}
+              <RouteMetricsHUD
+                routeData={routeData}
+                vehicleProfile={VEHICLE_PROFILES[vehicleType]}
+                originName={originName}
+                destName={destName}
+                onOpenReport={() => setIsReportOpen(true)}
+                onVehiclePositionUpdate={setVehicleLivePos}
+              />
 
-          {/* Bottom Contextual Tactical Drawer (Tabs) */}
-          <TacticalDrawer
-            routeData={routeData}
-            fleet={fleet}
-            onReportIncident={handleReportIncident}
-            selectedState={selectedState}
-            selectedDistrict={selectedDistrict}
-          />
-        </div>
-      </div>
+              {/* Interactive OpenStreetMap Map Libre View */}
+              <div className="flex-1 relative">
+                <MapView
+                  regionCenter={mapCenter}
+                  routeData={routeData}
+                  hospitals={hospitals}
+                  fleet={fleet}
+                  incidents={incidents}
+                  selectedIncident={selectedIncident}
+                  onSelectIncident={setSelectedIncident}
+                  originCoords={originCoords}
+                  destCoords={destCoords}
+                  originName={originName}
+                  destName={destName}
+                  vehicleLivePos={vehicleLivePos}
+                  vehicleProfile={VEHICLE_PROFILES[vehicleType]}
+                />
+
+                {/* Civilian Mode Overlay Card if active */}
+                {isCivilianMode && (
+                  <div className="absolute top-20 right-4 z-30 max-w-sm pointer-events-auto">
+                    <CivilianSafetyCard
+                      recommendation={routeData ? {
+                        primary_route: {
+                          travel_time_min: routeData.safe_corridor?.estimated_transit_time_min || 15,
+                          total_length_km: routeData.safe_corridor?.total_distance_km || 10,
+                          max_water_depth_m: (waterDepth * 0.3) / 100
+                        },
+                        assigned_hospital: {
+                          name: destName,
+                          beds_trauma_avail: 16,
+                          beds_icu_avail: 18,
+                          beds_general_avail: 72
+                        },
+                        assigned_vehicle: {
+                          callsign: 'Verified Emergency Corridor'
+                        }
+                      } : null}
+                      disasterType={disasterType}
+                      onOpenSOS={() => setIsSOSOpen(true)}
+                    />
+                  </div>
+                )}
+              </div>
+
+              {/* Bottom Contextual Tactical Drawer (Tabs) */}
+              <TacticalDrawer
+                routeData={routeData}
+                fleet={fleet}
+                onReportIncident={handleReportIncident}
+                selectedState={selectedState}
+                selectedDistrict={selectedDistrict}
+              />
+            </div>
+          </div>
+        </>
+      )}
 
       {/* 3. Modals */}
       <AuthModal
@@ -360,6 +463,7 @@ export default function App() {
         onSelectRole={setCurrentRole}
         isCivilianMode={isCivilianMode}
         onToggleCivilianMode={() => setIsCivilianMode(!isCivilianMode)}
+        onSelectView={handleSelectView}
       />
 
       <CivilianSOSModal

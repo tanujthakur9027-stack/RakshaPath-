@@ -30,7 +30,9 @@ export default function Header({
   onOpenAuth,
   onOpenSOS,
   onOpenGuide,
-  onOpenHackathonPitch = () => {}
+  onOpenHackathonPitch = () => {},
+  activeView = 'officer',
+  onSelectView = () => {}
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -52,29 +54,63 @@ export default function Header({
     { id: 'landslide', label: 'Landslide', icon: Mountain, color: 'text-emerald-400' },
   ];
 
+  const viewTabs = [
+    { id: 'landing', label: 'Intro / Login' },
+    { id: 'officer', label: 'Officer Command' },
+    { id: 'citizen', label: 'Citizen Safety' },
+    { id: 'crew', label: 'Fleet Terminal' },
+    { id: 'simulation', label: 'Simulation Lab' }
+  ];
+
   return (
-    <header className="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md px-4 py-2.5 border-b border-slate-800 flex flex-col gap-2.5 shadow-xl select-none">
+    <header className="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md px-4 py-2 border-b border-slate-800 flex flex-col gap-2 shadow-xl select-none">
       {/* Top Main Row */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         {/* Brand & Status */}
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-slate-900 to-slate-800 border border-slate-700 flex items-center justify-center shadow-lg">
-            <Shield className="w-5 h-5 text-cyan-400" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="font-extrabold text-sm sm:text-base text-white tracking-tight">
-                RAKSHAPATH <span className="text-xs text-slate-400 font-normal">(रक्षापथ)</span>
-              </span>
-              <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                ● Core: ONLINE
-              </span>
+          <button
+            onClick={() => onSelectView('landing')}
+            className="flex items-center gap-2.5 text-left group transition"
+            title="Return to Intro Page"
+          >
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-700 border border-cyan-400/30 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+              <Shield className="w-4 h-4 text-white" />
             </div>
-            <div className="text-[11px] text-slate-400 font-medium">
-              National Emergency Mobility GIS Network • Autonomous Disaster Corridor AI
+            <div>
+              <div className="flex items-center gap-1.5">
+                <span className="font-extrabold text-sm sm:text-base text-white tracking-tight group-hover:text-cyan-300 transition-colors">
+                  RAKSHAPATH <span className="text-xs text-slate-400 font-normal">(रक्षापथ)</span>
+                </span>
+                <span className="hidden sm:inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  ● 2.0 ONLINE
+                </span>
+              </div>
+              <div className="text-[10px] text-slate-400 font-medium hidden sm:block">
+                National Emergency Mobility GIS Network
+              </div>
             </div>
-          </div>
+          </button>
         </div>
+
+        {/* View Switcher Tabs (Senior Google SDE Multi-Page Architecture) */}
+        <nav className="flex items-center bg-slate-900/90 border border-slate-800 p-1 rounded-xl gap-1">
+          {viewTabs.map((tab) => {
+            const isActive = activeView === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => onSelectView(tab.id)}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+                  isActive
+                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-md shadow-cyan-950'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
+                }`}
+              >
+                <span>{tab.label}</span>
+              </button>
+            );
+          })}
+        </nav>
 
         {/* Search, GPS, Personnel Badge & Actions */}
         <div className="flex items-center gap-2 flex-wrap">
